@@ -1,0 +1,9 @@
+feature,normalized_name,normalization_method,q_0.01,q_0.99,denominator,raw_min,raw_max,raw_mean,raw_std,scaled_min,scaled_max,scaled_mean
+f_caps,x_caps,"Winsorize(1st, 99th) + Min-Max",0.0,1.0,1.000001,0.0,1.0,0.19945,0.300198,0.0,0.999999,0.199449
+f_trigger,x_trigger,"Winsorize(1st, 99th) + Min-Max",0.0,0.333333,0.333334,0.0,0.444444,0.099252,0.098594,0.0,0.999997,0.295962
+f_sensitive,x_sensitive,"Winsorize(1st, 99th) + Min-Max",0.0,0.25,0.250001,0.0,0.375,0.023641,0.063015,0.0,0.999996,0.091874
+f_symbol,x_symbol,"Winsorize(1st, 99th) + Min-Max",0.0,0.716667,0.716668,0.0,2.125,0.090872,0.203919,0.0,0.999999,0.114107
+f_contrast,x_contrast,"Winsorize(1st, 99th) + Min-Max",0.172473,0.353491,0.181019,0.153786,0.392131,0.257157,0.036746,0.0,0.999994,0.467179
+f_saturation,x_saturation,"Winsorize(1st, 99th) + Min-Max",0.176917,0.375223,0.198307,0.167917,0.382095,0.28867,0.045493,0.0,0.999995,0.563524
+f_face,x_face,"Direct Identity Preservation [0, 1]",0.0,1.0,1.0,0.0,1.0,0.935484,0.246333,0.0,1.0,0.935484
+f_expr,x_expr,"Direct Identity Preservation [0, 1]",0.0,0.98,1.0,0.0,0.99,0.205108,0.25898,0.0,0.99,0.205108

@@ -1,0 +1,9 @@
+feature,pca_loading,orientation,explained_variance_ratio_pc1,correlation_with_x_equal,pc1_min_before_scaling,pc1_max_before_scaling
+x_caps,0.336792,positive,0.210141,0.740702,-3.667747,3.438617
+x_trigger,0.245851,positive,0.210141,0.740702,-3.667747,3.438617
+x_sensitive,-0.454311,negative,0.210141,0.740702,-3.667747,3.438617
+x_symbol,0.326467,positive,0.210141,0.740702,-3.667747,3.438617
+x_face,0.263242,positive,0.210141,0.740702,-3.667747,3.438617
+x_expr,0.206938,positive,0.210141,0.740702,-3.667747,3.438617
+x_contrast,0.364066,positive,0.210141,0.740702,-3.667747,3.438617
+x_saturation,0.518156,positive,0.210141,0.740702,-3.667747,3.438617

@@ -1,0 +1,6 @@
+row_index,field,original_value,cleaned_value,action,details
+0,channel_name,\,Airrack,channel_name_repaired,Channel ID UCyps-v4WNjWDnYRKmZ4BUGw matched to valid name 'Airrack'
+18,video_id,#NAME?,-Ad7lJ74XSE,video_id_recovered_from_thumbnail_url,Unambiguously extracted 11-character video ID from thumbnail URL: https://i.ytimg.com/vi/-Ad7lJ74XSE/maxresdefault.jpg
+47,video_id,#NAME?,-Lt0idIsJWo,video_id_recovered_from_thumbnail_url,Unambiguously extracted 11-character video ID from thumbnail URL: https://i.ytimg.com/vi/-Lt0idIsJWo/maxresdefault.jpg
+83,video_id,#NAME?,-gnzjVbYkgE,video_id_recovered_from_thumbnail_url,Unambiguously extracted 11-character video ID from thumbnail URL: https://i.ytimg.com/vi/-gnzjVbYkgE/maxresdefault.jpg
+152,video_id,#NAME?,-j8WOAHw5d4,video_id_recovered_from_thumbnail_url,Unambiguously extracted 11-character video ID from thumbnail URL: https://i.ytimg.com/vi/-j8WOAHw5d4/maxresdefault.jpg

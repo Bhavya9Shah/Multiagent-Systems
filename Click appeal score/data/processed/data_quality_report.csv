@@ -1,0 +1,22 @@
+metric,value,notes
+total_input_rows,186,Total rows in raw challenge_videos_final dataset
+total_output_rows,186,Total rows in cleaned_videos.csv
+rows_deleted,0,No rows silently deleted
+total_columns,16,Number of columns in dataset
+input_encoding,cp1252,Original character encoding
+output_encoding,UTF-8,Standardized output character encoding
+malformed_video_ids_found,4,Rows with Excel #NAME? formula error
+malformed_video_ids_recovered,4,Recovered unambiguously from thumbnail URL
+duplicate_video_ids_raw,3,Duplicates in raw data before ID recovery
+duplicate_video_ids_cleaned,0,Duplicates in cleaned data (must be 0)
+channel_name_corrections,1,Repaired backslash to Airrack
+missing_values_cleaned,0,Total null/NaN cells in cleaned dataset
+unique_channels_count,38,Distinct creator channels
+date_range_start,2024-10-02,Earliest video publication date
+date_range_end,2026-10-01,Latest video publication date
+raw_face_count_min,0,Minimum existing face_count in dataset
+raw_face_count_max,7,Maximum existing face_count in dataset
+raw_face_count_mean,1.4624,Mean existing face_count in dataset
+raw_face_count_median,1.0,Median existing face_count in dataset
+raw_zero_face_thumbnails_count,31,Videos with 0 existing face count
+raw_zero_face_thumbnails_pct,16.67,Percentage with 0 existing face count

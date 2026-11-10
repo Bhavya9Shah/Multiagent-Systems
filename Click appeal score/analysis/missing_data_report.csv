@@ -1,0 +1,9 @@
+Stage,Item,Total,Missing,Missing_Pct,Status
+1. Dataset Loading,Raw Video Rows,186,0,0.0,Complete
+2. Cleaning,Video IDs,186,0,0.0,100% Recovered
+3. Retrieval,Thumbnail Downloads,186,0,0.0,100% Downloaded
+4. Title Features,Title Signals (caps/trig/sens/sym),186,0,0.0,Complete
+5. Vision Features,Face Detection (MediaPipe),186,0,0.0,Complete
+5. Vision Features,Expression Score (FER),186,0,0.0,"Complete (0 errors, 12 no-face=0)"
+5. Vision Features,Contrast & Saturation,186,0,0.0,Complete
+6. Scoring,Composite Click Appeal Scores,186,0,0.0,Complete
