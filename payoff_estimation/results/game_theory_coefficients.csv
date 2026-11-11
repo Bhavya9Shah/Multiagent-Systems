@@ -1,0 +1,10 @@
+parameter,value,cluster_se,interpretation
+beta_0_intercept,-7.98373226401654,8.39806848589749,Baseline intercept
+beta_1_own_click_appeal,8.301958696181705,20.255364770594475,Linear marginal return to own click appeal
+beta_2_quadratic_own_appeal,-9.167701735811391,8.438075818187473,Quadratic diminishing returns (concavity parameter)
+beta_3_peer_click_appeal,3.80211987697972,18.587921483786847,Attention congestion from competing creators
+beta_4_log_subscribers,1.066772053929996,0.1141009115725143,Creator scale elasticity
+beta_5_interaction_own_peer,-0.7822444099693193,46.474655443706794,Strategic interaction (complements if > 0)
+x_Nash,0.434256282341901,,Symmetric Nash equilibrium
+x_Social_Optimum,0.6082484465654208,,Symmetric social optimum
+well_posedness_all_satisfied,1.0,,"1 if concavity, contraction, and welfare concavity hold; 0 otherwise"

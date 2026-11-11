@@ -1,0 +1,30 @@
+2026-11-11 23:58:48,666 [INFO] 
+=======================================================
+2026-11-11 23:58:48,666 [INFO] STARTING STAGE: Stage 1: Data Preparation & Competitor LOCO Construction (prepare_data.py)
+2026-11-11 23:58:48,666 [INFO] =======================================================
+2026-11-11 23:58:50,557 [INFO] STAGE COMPLETED: Stage 1: Data Preparation & Competitor LOCO Construction in 1.87 seconds.
+2026-11-11 23:58:50,557 [INFO] 
+=======================================================
+2026-11-11 23:58:50,557 [INFO] STARTING STAGE: Stage 2: Econometric Estimation & Game Theory Param Export (run_regressions.py)
+2026-11-11 23:58:50,557 [INFO] =======================================================
+2026-11-11 23:58:53,545 [INFO] STAGE COMPLETED: Stage 2: Econometric Estimation & Game Theory Param Export in 2.99 seconds.
+2026-11-11 23:58:53,545 [INFO] 
+=======================================================
+2026-11-11 23:58:53,545 [INFO] STARTING STAGE: Stage 3: Publication-Quality Diagnostic Plot Generation (generate_plots.py)
+2026-11-11 23:58:53,545 [INFO] =======================================================
+2026-11-11 23:59:01,737 [INFO] STAGE COMPLETED: Stage 3: Publication-Quality Diagnostic Plot Generation in 8.19 seconds.
+2026-11-12 00:00:29,419 [INFO] 
+=======================================================
+2026-11-12 00:00:29,419 [INFO] STARTING STAGE: Stage 1: Data Preparation & Competitor LOCO Construction (prepare_data.py)
+2026-11-12 00:00:29,419 [INFO] =======================================================
+2026-11-12 00:00:31,601 [INFO] STAGE COMPLETED: Stage 1: Data Preparation & Competitor LOCO Construction in 2.18 seconds.
+2026-11-12 00:00:31,601 [INFO] 
+=======================================================
+2026-11-12 00:00:31,601 [INFO] STARTING STAGE: Stage 2: Econometric Estimation & Game Theory Param Export (run_regressions.py)
+2026-11-12 00:00:31,601 [INFO] =======================================================
+2026-11-12 00:00:34,879 [INFO] STAGE COMPLETED: Stage 2: Econometric Estimation & Game Theory Param Export in 3.28 seconds.
+2026-11-12 00:00:34,879 [INFO] 
+=======================================================
+2026-11-12 00:00:34,879 [INFO] STARTING STAGE: Stage 3: Publication-Quality Diagnostic Plot Generation (generate_plots.py)
+2026-11-12 00:00:34,879 [INFO] =======================================================
+2026-11-12 00:00:43,807 [INFO] STAGE COMPLETED: Stage 3: Publication-Quality Diagnostic Plot Generation in 8.93 seconds.

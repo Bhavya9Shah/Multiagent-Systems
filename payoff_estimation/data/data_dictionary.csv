@@ -1,0 +1,28 @@
+variable,type,role,description
+video_id,string,Identifier,Unique YouTube video identifier
+channel_id,string,Cluster/Creator ID,Unique YouTube channel identifier (cluster variable)
+channel_name,string,Metadata,Channel display name
+published_at,datetime,Metadata,UTC timestamp of video publication
+year_month,string,Temporal,Calendar year and month (YYYY-MM)
+quarter,string,Temporal,Calendar year and quarter (YYYYQ#)
+views,integer,Raw Dependent Variable,Cumulative video view count (V_it)
+log_views,float,Dependent Variable (y),Natural logarithm of video views: log(V_it)
+subscribers,integer,Raw Scale Variable,Channel total subscriber count (s_i)
+log_subscribers,float,Scale Variable,Natural logarithm of subscriber count: log(s_i)
+score_weighted,float,Click Appeal Score (x),"Primary multimodal Click Appeal Score x_it in [0, 1] (0.4 Title + 0.6 Thumbnail)"
+x,float,Click Appeal Score (x),Alias for score_weighted (x_it)
+x2,float,Quadratic Own-Score (x^2),Squared Click Appeal Score x_it^2 measuring diminishing returns
+x_bar_roll90,float,Competitor Average,Leave-one-out peer average click appeal in rolling 90-day window (t +/- 45d)
+x_inter_roll90,float,Interaction Term,"Product of own click appeal and rolling 90d peer average: x_it * x_bar_(-i,t)"
+x_bar_global,float,Competitor Average (Alt),Leave-one-creator-out average across entire 38-creator niche sample
+x_inter_global,float,Interaction Term (Alt),Product of own click appeal and global LOCO peer average
+x_c,float,Centered x,Mean-centered click appeal: x_it - mean(x)
+x2_c,float,Centered x^2,Squared mean-centered click appeal: (x_it - mean(x))^2
+x_bar_roll90_c,float,Centered Peer Average,Mean-centered rolling 90d peer average
+x_inter_roll90_c,float,Centered Interaction,Product of centered own score and centered peer average
+duration_sec,integer,Raw Control,Video duration in seconds
+log_duration,float,Control (Z),Natural logarithm of video duration in seconds
+age_days,float,Control (Z),Elapsed days between video publication and data collection
+channel_video_count,integer,Raw Control,Total catalog size of the channel
+log_channel_video_count,float,Control (Z),Natural log of total channel video count
+tags_count,integer,Control (Z),Number of metadata tags attached to video

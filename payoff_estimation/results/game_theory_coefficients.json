@@ -1,0 +1,91 @@
+{
+  "project": "Click Appeal as a Potential Game: Modeling Creator Incentives, Attention Congestion, and Social Welfare in YouTube",
+  "component": "Empirical Payoff Function Estimation",
+  "author": "Bhavya Shah (24110324)",
+  "handover_recipient": "Khushi Shah (24110326) - Game Theory Teammate",
+  "sample_size": 186,
+  "number_of_creators_n": 38,
+  "specification": {
+    "model_name": "M4_Full_Proposed",
+    "equation": "log(V_it) = beta_0 + beta_1*x_it + beta_2*x_it^2 + beta_3*x_bar_(-i,t) + beta_5*x_it*x_bar_(-i,t) + beta_4*log(s_i) + gamma_1*log(duration_it) + gamma_2*age_it + eps_it",
+    "peer_average_definition": "Rolling 90-day window (+/- 45 days) Leave-One-Creator-Out (LOCO)",
+    "inference": "Cluster-Robust Standard Errors (38 Channel Clusters)"
+  },
+  "coefficients": {
+    "beta_0_intercept": -7.983732,
+    "beta_1_own_click_appeal": 8.301959,
+    "beta_2_quadratic_own_appeal": -9.167702,
+    "beta_3_peer_click_appeal": 3.80212,
+    "beta_4_log_subscribers": 1.066772,
+    "beta_5_interaction_own_peer": -0.782244,
+    "gamma_log_duration": 0.274382,
+    "gamma_age_days": 0.000103
+  },
+  "standard_errors_cluster_robust": {
+    "se_beta_0": 8.398068,
+    "se_beta_1": 20.255365,
+    "se_beta_2": 8.438076,
+    "se_beta_3": 18.587921,
+    "se_beta_4": 0.114101,
+    "se_beta_5": 46.474655
+  },
+  "confidence_intervals_95_cluster_robust": {
+    "ci_beta_1": [
+      -31.3978,
+      48.0017
+    ],
+    "ci_beta_2": [
+      -25.706,
+      7.3706
+    ],
+    "ci_beta_3": [
+      -32.6295,
+      40.2338
+    ],
+    "ci_beta_5": [
+      -91.8709,
+      90.3064
+    ]
+  },
+  "well_posedness_evaluation": {
+    "condition_1_concavity_beta2_negative": {
+      "formula": "beta_2 < 0",
+      "value": -9.1677,
+      "satisfied": true,
+      "notes": "Concavity is strictly satisfied (beta_2 = -9.1677 < 0)."
+    },
+    "condition_2_unique_stable_nash_contraction": {
+      "formula": "-min(2, n-1)*|beta_2| < beta_5 < |beta_2|",
+      "lower_bound": -18.3354,
+      "beta_5_value": -0.7822,
+      "upper_bound": 9.1677,
+      "satisfied": true,
+      "contraction_rate": 0.0427,
+      "notes": "Contraction rate is 0.0427 < 1.0. Best-response map is a contraction; unique and stable symmetric Nash equilibrium guaranteed."
+    },
+    "condition_3_social_welfare_strict_concavity": {
+      "formula": "beta_2 + beta_5 < 0",
+      "value": -9.9499,
+      "satisfied": true,
+      "notes": "Total welfare concavity holds strictly (beta_2 + beta_5 = -9.9499 < 0)."
+    },
+    "all_conditions_satisfied": true
+  },
+  "game_theoretic_equilibria": {
+    "x_Nash": 0.4343,
+    "raw_x_Nash_unclipped": 0.4343,
+    "is_interior_Nash": true,
+    "x_Social_Optimum": 0.6082,
+    "raw_x_SO_unclipped": 0.6082,
+    "is_interior_SO": true,
+    "x_dominant_strategy_no_interaction": 0.4528,
+    "x_star_from_M2_Quadratic": 0.4372
+  },
+  "empirical_benchmark": {
+    "empirical_mean_click_appeal": 0.3958,
+    "empirical_median_click_appeal": 0.3999,
+    "empirical_min_click_appeal": 0.0734,
+    "empirical_max_click_appeal": 0.6569,
+    "interpretation": "Fitted Nash equilibrium x_Nash = 0.4343 sits comfortably in the empirical distribution ([0.0734, 0.6569]), slightly above the empirical mean (0.3958), consistent with competitive click-appeal escalation."
+  }
+}

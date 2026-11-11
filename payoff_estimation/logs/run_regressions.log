@@ -1,0 +1,51 @@
+2026-11-11 23:56:53,913 [INFO] Loading prepared dataset...
+2026-11-11 23:56:53,924 [INFO] Loaded 186 records across 38 channels.
+2026-11-11 23:56:53,924 [INFO] Fitting M1_Baseline_Linear with features: ['x', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-11 23:56:53,929 [INFO] Fitting M2_Quadratic_OwnScore with features: ['x', 'x2', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-11 23:56:53,935 [INFO] Fitting M3_Peer_Average with features: ['x', 'x2', 'x_bar_roll90', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-11 23:56:53,939 [INFO] Fitting M4_Full_Proposed with features: ['x', 'x2', 'x_bar_roll90', 'x_inter_roll90', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-11 23:56:53,943 [INFO] Fitting M4_Full_Centered with features: ['x_c', 'x2_c', 'x_bar_roll90_c', 'x_inter_roll90_c', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-11 23:56:53,948 [INFO] Fitting R1_Global_LOCO with features: ['x', 'x2', 'x_bar_global', 'x_inter_global', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-11 23:56:53,952 [INFO] Fitting R2_No_Subscribers with features: ['x', 'x2', 'x_bar_roll90', 'x_inter_roll90', 'log_duration', 'age_days']
+2026-11-11 23:56:53,956 [INFO] Fitting R3_Score_No_Expr with features: ['x_no_expr', 'x2_no_expr', 'x_bar_roll90', 'x_inter_roll90', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-11 23:56:53,962 [INFO] Fitting R4_Extended_Controls with features: ['x', 'x2', 'x_bar_roll90', 'x_inter_roll90', 'log_subscribers', 'log_duration', 'age_days', 'log_channel_video_count', 'tags_count']
+2026-11-11 23:56:54,021 [INFO] Saved regression results to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\regression_results.csv
+2026-11-11 23:56:54,026 [INFO] Saved model comparison table to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\model_comparison.csv
+2026-11-11 23:56:54,029 [INFO] Saved multicollinearity diagnostics to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\multicollinearity_diagnostics.csv
+2026-11-11 23:56:54,034 [INFO] Saved hypothesis testing summary to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\hypothesis_tests.csv
+2026-11-11 23:56:54,039 [INFO] Saved game-theoretic JSON to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\game_theory_coefficients.json
+2026-11-11 23:56:54,041 [INFO] Saved game-theoretic CSV to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\game_theory_coefficients.csv
+2026-11-11 23:58:53,050 [INFO] Loading prepared dataset...
+2026-11-11 23:58:53,067 [INFO] Loaded 186 records across 38 channels.
+2026-11-11 23:58:53,068 [INFO] Fitting M1_Baseline_Linear with features: ['x', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-11 23:58:53,076 [INFO] Fitting M2_Quadratic_OwnScore with features: ['x', 'x2', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-11 23:58:53,082 [INFO] Fitting M3_Peer_Average with features: ['x', 'x2', 'x_bar_roll90', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-11 23:58:53,088 [INFO] Fitting M4_Full_Proposed with features: ['x', 'x2', 'x_bar_roll90', 'x_inter_roll90', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-11 23:58:53,096 [INFO] Fitting M4_Full_Centered with features: ['x_c', 'x2_c', 'x_bar_roll90_c', 'x_inter_roll90_c', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-11 23:58:53,102 [INFO] Fitting R1_Global_LOCO with features: ['x', 'x2', 'x_bar_global', 'x_inter_global', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-11 23:58:53,111 [INFO] Fitting R2_No_Subscribers with features: ['x', 'x2', 'x_bar_roll90', 'x_inter_roll90', 'log_duration', 'age_days']
+2026-11-11 23:58:53,118 [INFO] Fitting R3_Score_No_Expr with features: ['x_no_expr', 'x2_no_expr', 'x_bar_roll90', 'x_inter_roll90', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-11 23:58:53,124 [INFO] Fitting R4_Extended_Controls with features: ['x', 'x2', 'x_bar_roll90', 'x_inter_roll90', 'log_subscribers', 'log_duration', 'age_days', 'log_channel_video_count', 'tags_count']
+2026-11-11 23:58:53,221 [INFO] Saved regression results to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\regression_results.csv
+2026-11-11 23:58:53,230 [INFO] Saved model comparison table to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\model_comparison.csv
+2026-11-11 23:58:53,232 [INFO] Saved multicollinearity diagnostics to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\multicollinearity_diagnostics.csv
+2026-11-11 23:58:53,240 [INFO] Saved hypothesis testing summary to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\hypothesis_tests.csv
+2026-11-11 23:58:53,247 [INFO] Saved game-theoretic JSON to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\game_theory_coefficients.json
+2026-11-11 23:58:53,250 [INFO] Saved game-theoretic CSV to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\game_theory_coefficients.csv
+2026-11-12 00:00:34,413 [INFO] Loading prepared dataset...
+2026-11-12 00:00:34,429 [INFO] Loaded 186 records across 38 channels.
+2026-11-12 00:00:34,430 [INFO] Fitting M1_Baseline_Linear with features: ['x', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-12 00:00:34,436 [INFO] Fitting M2_Quadratic_OwnScore with features: ['x', 'x2', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-12 00:00:34,442 [INFO] Fitting M3_Peer_Average with features: ['x', 'x2', 'x_bar_roll90', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-12 00:00:34,449 [INFO] Fitting M4_Full_Proposed with features: ['x', 'x2', 'x_bar_roll90', 'x_inter_roll90', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-12 00:00:34,455 [INFO] Fitting M4_Full_Centered with features: ['x_c', 'x2_c', 'x_bar_roll90_c', 'x_inter_roll90_c', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-12 00:00:34,462 [INFO] Fitting R1_Global_LOCO with features: ['x', 'x2', 'x_bar_global', 'x_inter_global', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-12 00:00:34,469 [INFO] Fitting R2_No_Subscribers with features: ['x', 'x2', 'x_bar_roll90', 'x_inter_roll90', 'log_duration', 'age_days']
+2026-11-12 00:00:34,476 [INFO] Fitting R3_Score_No_Expr with features: ['x_no_expr', 'x2_no_expr', 'x_bar_roll90', 'x_inter_roll90', 'log_subscribers', 'log_duration', 'age_days']
+2026-11-12 00:00:34,482 [INFO] Fitting R4_Extended_Controls with features: ['x', 'x2', 'x_bar_roll90', 'x_inter_roll90', 'log_subscribers', 'log_duration', 'age_days', 'log_channel_video_count', 'tags_count']
+2026-11-12 00:00:34,575 [INFO] Saved regression results to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\regression_results.csv
+2026-11-12 00:00:34,583 [INFO] Saved model comparison table to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\model_comparison.csv
+2026-11-12 00:00:34,586 [INFO] Saved multicollinearity diagnostics to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\multicollinearity_diagnostics.csv
+2026-11-12 00:00:34,592 [INFO] Saved hypothesis testing summary to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\hypothesis_tests.csv
+2026-11-12 00:00:34,599 [INFO] Saved game-theoretic JSON to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\game_theory_coefficients.json
+2026-11-12 00:00:34,601 [INFO] Saved game-theoretic CSV to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\game_theory_coefficients.csv

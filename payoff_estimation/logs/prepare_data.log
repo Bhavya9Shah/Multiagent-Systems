@@ -1,0 +1,12 @@
+2026-11-11 23:55:29,549 [INFO] Loading input scores from: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\Click appeal score\scores\video_scores.csv
+2026-11-11 23:55:29,558 [INFO] Raw dataset loaded: 186 rows, 40 columns.
+2026-11-11 23:55:30,088 [INFO] Saved prepared payoff dataset to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\data\prepared_payoff_data.csv (186 rows, 68 columns)
+2026-11-11 23:55:30,092 [INFO] Saved data dictionary to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\data\data_dictionary.csv
+2026-11-11 23:58:49,569 [INFO] Loading input scores from: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\Click appeal score\scores\video_scores.csv
+2026-11-11 23:58:49,583 [INFO] Raw dataset loaded: 186 rows, 40 columns.
+2026-11-11 23:58:50,418 [INFO] Saved prepared payoff dataset to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\data\prepared_payoff_data.csv (186 rows, 68 columns)
+2026-11-11 23:58:50,421 [INFO] Saved data dictionary to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\data\data_dictionary.csv
+2026-11-12 00:00:30,563 [INFO] Loading input scores from: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\Click appeal score\scores\video_scores.csv
+2026-11-12 00:00:30,577 [INFO] Raw dataset loaded: 186 rows, 40 columns.
+2026-11-12 00:00:31,429 [INFO] Saved prepared payoff dataset to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\data\prepared_payoff_data.csv (186 rows, 68 columns)
+2026-11-12 00:00:31,431 [INFO] Saved data dictionary to C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\data\data_dictionary.csv
