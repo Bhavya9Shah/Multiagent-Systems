@@ -1,0 +1,103 @@
+2026-11-16 21:35:38,860 [INFO] ================================================================================
+2026-11-16 21:35:38,860 [INFO] STEP 7: POST-TEST FULL-SAMPLE STRUCTURAL CALIBRATION & GAME THEORY HANDOFF
+2026-11-16 21:35:38,860 [INFO] ================================================================================
+2026-11-16 21:35:38,861 [INFO] CONTEXT: Post-test full-sample estimation is conducted ONLY after holdout test
+generalization was verified. The resulting parameters serve as structural inputs
+for the CS 329 potential game simulation (Khushi Shah) and social welfare analysis.
+2026-11-16 21:35:38,875 [INFO] Loaded Full Dataset: N = 809 observations across G = 38 channels.
+2026-11-16 21:35:38,875 [INFO] Computing contemporaneous rolling peer appeal [t - 30d, t + 30d] across all 38 channels...
+2026-11-16 21:35:40,039 [INFO] Full-Sample Centering Parameters: mu_x = 0.392395, mu_xbar = 0.391390
+2026-11-16 21:35:40,042 [INFO] 
+================================================================================
+2026-11-16 21:35:40,042 [INFO] ESTIMATING FULL-SAMPLE MODEL 4-CENTERED (PRIMARY STRUCTURAL SPECIFICATION)
+2026-11-16 21:35:40,042 [INFO] ================================================================================
+2026-11-16 21:35:40,050 [INFO] Centered Model VIFs (Resolution of Multicollinearity):
+2026-11-16 21:35:40,051 [INFO]   x_c               : VIF =    1.121
+2026-11-16 21:35:40,051 [INFO]   x2_c              : VIF =    1.214
+2026-11-16 21:35:40,051 [INFO]   x_bar_c           : VIF =    1.068
+2026-11-16 21:35:40,051 [INFO]   x_inter_c         : VIF =    1.165
+2026-11-16 21:35:40,051 [INFO]   log_subscribers   : VIF =    1.132
+2026-11-16 21:35:40,051 [INFO]   log_duration      : VIF =    1.088
+2026-11-16 21:35:40,051 [INFO]   age_days          : VIF =    1.020
+2026-11-16 21:35:40,051 [INFO] 
+Centered Model 4 Estimates (CRSE Clustered by Channel, G = 38):
+2026-11-16 21:35:40,057 [INFO]   const             : Coef =    -2.7904 | CRSE =   2.4168 | t =  -1.155 | p(t_df37) = 0.2557 | 95% CI = [  -7.687,    2.106]
+2026-11-16 21:35:40,058 [INFO]   x_c               : Coef =    -0.3135 | CRSE =   1.9191 | t =  -0.163 | p(t_df37) = 0.8711 | 95% CI = [  -4.202,    3.575]
+2026-11-16 21:35:40,058 [INFO]   x2_c              : Coef =    -8.1974 | CRSE =   8.2994 | t =  -0.988 | p(t_df37) = 0.3297 | 95% CI = [ -25.014,    8.619]
+2026-11-16 21:35:40,059 [INFO]   x_bar_c           : Coef =     2.6172 | CRSE =   6.0386 | t =   0.433 | p(t_df37) = 0.6672 | 95% CI = [  -9.618,   14.853]
+2026-11-16 21:35:40,059 [INFO]   x_inter_c         : Coef =    20.7942 | CRSE =  60.2260 | t =   0.345 | p(t_df37) = 0.7318 | 95% CI = [-101.235,  142.824]
+2026-11-16 21:35:40,060 [INFO]   log_subscribers   : Coef =     1.0417 | CRSE =   0.1147 | t =   9.079 | p(t_df37) = 0.0000 | 95% CI = [   0.809,    1.274]
+2026-11-16 21:35:40,060 [INFO]   log_duration      : Coef =     0.0454 | CRSE =   0.2534 | t =   0.179 | p(t_df37) = 0.8588 | 95% CI = [  -0.468,    0.559]
+2026-11-16 21:35:40,060 [INFO]   age_days          : Coef =     0.0003 | CRSE =   0.0003 | t =   1.013 | p(t_df37) = 0.3178 | 95% CI = [  -0.000,    0.001]
+2026-11-16 21:35:40,066 [INFO] Saved structural regression results table: C:\Users\bhavy\OneDrive\Desktop\Multiagent System\project\clickappeal_new\payoff_estimation\results\post_test_structural_regression_results.csv
+2026-11-16 21:35:40,066 [INFO] 
+================================================================================
+2026-11-16 21:35:40,066 [INFO] RUNNING WILD CLUSTER BOOTSTRAP INFERENCE (B = 2000 DRAWS, SEED = 42)
+2026-11-16 21:35:40,066 [INFO] ================================================================================
+2026-11-16 21:35:40,066 [INFO] Finite sample cluster scaling factor c = 1.017842 (G=38, N=809, K=8)
+2026-11-16 21:36:40,145 [INFO] ================================================================================
+2026-11-16 21:36:40,145 [INFO] STEP 7: POST-TEST FULL-SAMPLE STRUCTURAL CALIBRATION & GAME THEORY HANDOFF
+2026-11-16 21:36:40,145 [INFO] ================================================================================
+2026-11-16 21:36:40,145 [INFO] CONTEXT: Post-test full-sample estimation is conducted ONLY after holdout test
+generalization was verified. The resulting parameters serve as structural inputs
+for the CS 329 potential game simulation (Khushi Shah) and social welfare analysis.
+2026-11-16 21:36:40,159 [INFO] Loaded Full Dataset: N = 809 observations across G = 38 channels.
+2026-11-16 21:36:40,159 [INFO] Computing contemporaneous rolling peer appeal [t - 30d, t + 30d] across all 38 channels...
+2026-11-16 21:36:41,309 [INFO] Full-Sample Centering Parameters: mu_x = 0.392395, mu_xbar = 0.391390
+2026-11-16 21:36:41,312 [INFO] 
+================================================================================
+2026-11-16 21:36:41,312 [INFO] ESTIMATING FULL-SAMPLE MODEL 4-CENTERED (PRIMARY STRUCTURAL SPECIFICATION)
+2026-11-16 21:36:41,312 [INFO] ================================================================================
+2026-11-16 21:36:41,320 [INFO] Centered Model VIFs (Resolution of Multicollinearity):
+2026-11-16 21:36:41,321 [INFO]   x_c               : VIF =    1.121
+2026-11-16 21:36:41,321 [INFO]   x2_c              : VIF =    1.214
+2026-11-16 21:36:41,321 [INFO]   x_bar_c           : VIF =    1.068
+2026-11-16 21:36:41,321 [INFO]   x_inter_c         : VIF =    1.165
+2026-11-16 21:36:41,321 [INFO]   log_subscribers   : VIF =    1.132
+2026-11-16 21:36:41,321 [INFO]   log_duration      : VIF =    1.088
+2026-11-16 21:36:41,321 [INFO]   age_days          : VIF =    1.020
+2026-11-16 21:36:41,321 [INFO] 
+Centered Model 4 Estimates (CRSE Clustered by Channel, G = 38):
+2026-11-16 21:36:41,322 [INFO]   const             : Coef =    -2.7904 | CRSE =   2.4168 | t =  -1.155 | p(t_df37) = 0.2557 | 95% CI = [  -7.687,    2.106]
+2026-11-16 21:36:41,322 [INFO]   x_c               : Coef =    -0.3135 | CRSE =   1.9191 | t =  -0.163 | p(t_df37) = 0.8711 | 95% CI = [  -4.202,    3.575]
+2026-11-16 21:36:41,322 [INFO]   x2_c              : Coef =    -8.1974 | CRSE =   8.2994 | t =  -0.988 | p(t_df37) = 0.3297 | 95% CI = [ -25.014,    8.619]
+2026-11-16 21:36:41,322 [INFO]   x_bar_c           : Coef =     2.6172 | CRSE =   6.0386 | t =   0.433 | p(t_df37) = 0.6672 | 95% CI = [  -9.618,   14.853]
+2026-11-16 21:36:41,323 [INFO]   x_inter_c         : Coef =    20.7942 | CRSE =  60.2260 | t =   0.345 | p(t_df37) = 0.7318 | 95% CI = [-101.235,  142.824]
+2026-11-16 21:36:41,323 [INFO]   log_subscribers   : Coef =     1.0417 | CRSE =   0.1147 | t =   9.079 | p(t_df37) = 0.0000 | 95% CI = [   0.809,    1.274]
+2026-11-16 21:36:41,323 [INFO]   log_duration      : Coef =     0.0454 | CRSE =   0.2534 | t =   0.179 | p(t_df37) = 0.8588 | 95% CI = [  -0.468,    0.559]
+2026-11-16 21:36:41,323 [INFO]   age_days          : Coef =     0.0003 | CRSE =   0.0003 | t =   1.013 | p(t_df37) = 0.3178 | 95% CI = [  -0.000,    0.001]
+2026-11-16 21:36:41,328 [INFO] Saved structural regression results table: C:\Users\bhavy\OneDrive\Desktop\Multiagent System\project\clickappeal_new\payoff_estimation\results\post_test_structural_regression_results.csv
+2026-11-16 21:36:41,328 [INFO] 
+================================================================================
+2026-11-16 21:36:41,328 [INFO] RUNNING WILD CLUSTER BOOTSTRAP INFERENCE (B = 2000 DRAWS, SEED = 42)
+2026-11-16 21:36:41,328 [INFO] ================================================================================
+2026-11-16 21:36:41,328 [INFO] Finite sample cluster scaling factor c = 1.017842 (G=38, N=809, K=8)
+2026-11-16 21:36:41,330 [INFO] Executing Test A: Null-Restricted WCB for H0: beta_2 >= 0 (Concavity)...
+2026-11-16 21:36:43,894 [INFO] Test A Result: t_sample = -0.9877 | WCB one-sided p-value = 0.2480 | Concavity H0 (beta_2 >= 0) is RETAINED at alpha = 0.05
+2026-11-16 21:36:43,895 [INFO] Executing Test B: Null-Restricted WCB for H0: beta_5 = 0 (Strategic Interaction)...
+2026-11-16 21:36:46,459 [INFO] Test B Result: t_sample = 0.3453 | WCB two-sided p-value = 0.7835 | Interaction H0 (beta_5 = 0) is RETAINED at alpha = 0.05
+2026-11-16 21:36:46,459 [INFO] Executing Test C: Unrestricted WCB for Parameter CIs and Contraction Ratio Distribution...
+2026-11-16 21:36:48,350 [INFO]   const             : Sample =    -2.7904 | Boot SE =   0.3302 | Boot 95% CI = [  -3.410,   -2.172]
+2026-11-16 21:36:48,351 [INFO]   x_c               : Sample =    -0.3135 | Boot SE =   0.3852 | Boot 95% CI = [  -1.028,    0.433]
+2026-11-16 21:36:48,351 [INFO]   x2_c              : Sample =    -8.1974 | Boot SE =   2.6536 | Boot 95% CI = [ -13.120,   -3.193]
+2026-11-16 21:36:48,352 [INFO]   x_bar_c           : Sample =     2.6172 | Boot SE =   3.0564 | Boot 95% CI = [  -3.278,    8.533]
+2026-11-16 21:36:48,352 [INFO]   x_inter_c         : Sample =    20.7942 | Boot SE =  31.8162 | Boot 95% CI = [ -40.686,   82.960]
+2026-11-16 21:36:48,353 [INFO]   log_subscribers   : Sample =     1.0417 | Boot SE =   0.0097 | Boot 95% CI = [   1.023,    1.061]
+2026-11-16 21:36:48,353 [INFO]   log_duration      : Sample =     0.0454 | Boot SE =   0.0531 | Boot 95% CI = [  -0.056,    0.146]
+2026-11-16 21:36:48,354 [INFO]   age_days          : Sample =     0.0003 | Boot SE =   0.0002 | Boot 95% CI = [  -0.000,    0.001]
+2026-11-16 21:36:48,356 [INFO] 
+================================================================================
+2026-11-16 21:36:48,356 [INFO] CONTRACTION RATIO & POTENTIAL GAME STABILITY AUDIT
+2026-11-16 21:36:48,356 [INFO] ================================================================================
+2026-11-16 21:36:48,356 [INFO] Sample Point Estimate beta_2: -8.197369 (Concave (Diminishing Returns))
+2026-11-16 21:36:48,356 [INFO] Sample Point Estimate beta_5: 20.794250
+2026-11-16 21:36:48,356 [INFO] Sample Contraction Ratio rho = |beta_5| / (2*|beta_2|): 1.2683 (rho < 1: False)
+2026-11-16 21:36:48,356 [INFO] Bootstrap Draws Concave (beta_2 < 0): 2000/2000 (100.00%)
+2026-11-16 21:36:48,356 [INFO] P(rho < 1 | beta_2 < 0): 32.40%
+2026-11-16 21:36:48,356 [INFO] P(beta_2 < 0 and rho < 1): 32.40%
+2026-11-16 21:36:48,356 [INFO] Contraction Ratio Quantiles (among concave draws): p10=0.2982, p25=0.7611, p50(median)=1.6434, p75=2.8524, p90=4.4912
+2026-11-16 21:36:48,362 [INFO] Saved game theory JSON payload: C:\Users\bhavy\OneDrive\Desktop\Multiagent System\project\clickappeal_new\payoff_estimation\results\game_theory_coefficients.json
+2026-11-16 21:36:48,362 [INFO] Saved game theory CSV payload: C:\Users\bhavy\OneDrive\Desktop\Multiagent System\project\clickappeal_new\payoff_estimation\results\game_theory_coefficients.csv
+2026-11-16 21:36:48,362 [INFO] ================================================================================
+2026-11-16 21:36:48,362 [INFO] STEP 7 COMPLETED SUCCESSFULLY: STRUCTURAL CALIBRATION & HANDOFF READY
+2026-11-16 21:36:48,362 [INFO] ================================================================================

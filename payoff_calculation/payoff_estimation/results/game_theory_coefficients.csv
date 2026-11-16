@@ -1,0 +1,14 @@
+parameter,value,se_crse,description
+beta_0_c_intercept,-2.7904402468278455,2.416793206575689,Centered Intercept
+beta_1_c_own_appeal,-0.3135297005865514,1.9191011206841946,Linear Own Appeal at Mean
+beta_2_c_curvature,-8.197369064002235,8.299407366719604,Quadratic Curvature
+beta_3_c_peer_congestion,2.617178231167514,6.038613874271168,Competitor Congestion at Mean
+beta_5_c_interaction,20.794249907773402,60.22602538361707,Strategic Interaction Term
+gamma_subscribers,1.0417303162390181,0.11473605366396031,Channel Scale Elasticity
+gamma_duration,0.04539869027386549,0.2534277171114793,Log Duration Elasticity
+gamma_age_days,0.0002953209480532577,0.0002916016959743716,Linear Age Drift per Day
+mu_x_centering,0.39239470580964153,,Sample Mean Own Click Appeal
+mu_xbar_centering,0.39138986963688116,,Sample Mean Competitor Peer Appeal
+contraction_ratio_rho,1.268349012068327,,|beta_5| / (2 * |beta_2|)
+wcb_p_val_concavity,0.248,,Null-Restricted WCB p-value for H0: beta_2 >= 0
+wcb_p_val_interaction,0.7835,,Null-Restricted WCB p-value for H0: beta_5 = 0

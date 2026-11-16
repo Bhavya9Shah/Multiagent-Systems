@@ -1,0 +1,26 @@
+2026-11-16 00:15:29,967 [INFO] ======================================================================
+2026-11-16 00:15:29,967 [INFO] STEP 3: PRIMARY MODEL DEVELOPMENT ON 26 TRAINING CHANNELS
+2026-11-16 00:15:29,967 [INFO] ======================================================================
+2026-11-16 00:15:29,983 [INFO] Isolated Training Sample: N = 541 videos across G = 26 channels.
+2026-11-16 00:15:29,983 [INFO] Constructing contemporaneous peer averages strictly among eligible training channels...
+2026-11-16 00:15:30,592 [INFO] Training peer appeal constructed: mean = 0.3886, std = 0.0115
+2026-11-16 00:15:30,592 [INFO] Active competitor channels per window: min = 17, median = 21.0, max = 24
+2026-11-16 00:15:30,593 [INFO] Training fold centering parameters: mu_x = 0.388862, mu_xbar = 0.388553
+2026-11-16 00:15:30,608 [INFO] Model_0_Baseline         : R² = 0.6324, Adj R² = 0.6303, AIC = 1914.2, BIC = 1931.3
+2026-11-16 00:15:30,616 [INFO] Model_1_Linear           : R² = 0.6373, Adj R² = 0.6346, AIC = 1908.9, BIC = 1930.4
+2026-11-16 00:15:30,624 [INFO] Model_2_Quadratic        : R² = 0.6376, Adj R² = 0.6342, AIC = 1910.4, BIC = 1936.2
+2026-11-16 00:15:30,634 [INFO] Model_3_PeerCongestion   : R² = 0.6378, Adj R² = 0.6337, AIC = 1912.1, BIC = 1942.1
+2026-11-16 00:15:30,645 [INFO] Model_4_Interaction      : R² = 0.6383, Adj R² = 0.6335, AIC = 1913.4, BIC = 1947.7
+2026-11-16 00:15:30,655 [INFO] Model_4_Centered         : R² = 0.6383, Adj R² = 0.6335, AIC = 1913.4, BIC = 1947.7
+2026-11-16 00:15:30,659 [INFO] Robustness Spec_A_Primary           : R² = 0.6383, AIC = 1913.4, BIC = 1947.7
+2026-11-16 00:15:30,662 [INFO] Robustness Spec_B_OmittedScale      : R² = 0.0876, AIC = 2411.9, BIC = 2442.0
+2026-11-16 00:15:30,668 [INFO] Robustness Spec_C_ChannelFE         : R² = 0.9072, AIC = 1225.6, BIC = 1363.0
+2026-11-16 00:15:30,672 [INFO] Robustness Spec_R_Tags              : R² = 0.6405, AIC = 1912.0, BIC = 1950.7
+2026-11-16 00:15:30,677 [INFO] Saved training regression results: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\training_regression_results.csv
+2026-11-16 00:15:30,677 [INFO] Saved model comparison table: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\training_model_comparison.csv
+2026-11-16 00:15:30,677 [INFO] Saved robustness table: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\subscriber_robustness_table.csv
+2026-11-16 00:15:30,677 [INFO] Saved multicollinearity diagnostics: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\training_multicollinearity_diagnostics.csv
+2026-11-16 00:15:30,691 [INFO] Saved prepared training dataset with peer features: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\data\train_prepared_data.csv
+2026-11-16 00:15:30,691 [INFO] ======================================================================
+2026-11-16 00:15:30,691 [INFO] STEP 3 COMPLETED SUCCESSFULLY: MODELS ESTIMATED ON 26 TRAINING CHANNELS
+2026-11-16 00:15:30,691 [INFO] ======================================================================

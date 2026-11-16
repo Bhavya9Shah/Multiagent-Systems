@@ -1,0 +1,43 @@
+2026-11-15 22:27:51,812 [INFO] ======================================================================
+2026-11-15 22:27:51,812 [INFO] RUNNING BOOTSTRAP VERIFICATION SUITE ON SYNTHETIC CLUSTERED DATA
+2026-11-15 22:27:51,812 [INFO] ======================================================================
+2026-11-15 22:27:51,867 [INFO] Generated synthetic dataset: N = 520 observations across G = 26 clusters.
+2026-11-15 22:27:51,872 [INFO] Unrestricted OLS Sample Estimates (True: beta_1=2.0, beta_2=-3.0, beta_5=0.0):
+2026-11-15 22:27:51,872 [INFO]   const: b = 9.4998, SE_CRSE = 0.9469, t = 10.0322
+2026-11-15 22:27:51,872 [INFO]   x: b = 1.8816, SE_CRSE = 1.1421, t = 1.6475
+2026-11-15 22:27:51,872 [INFO]   x2: b = -2.4897, SE_CRSE = 0.7862, t = -3.1667
+2026-11-15 22:27:51,872 [INFO]   x_bar: b = 0.1561, SE_CRSE = 0.7520, t = 0.2076
+2026-11-15 22:27:51,872 [INFO]   x_inter: b = -0.9746, SE_CRSE = 1.5967, t = -0.6104
+2026-11-15 22:27:51,873 [INFO]   log_s: b = 0.5243, SE_CRSE = 0.0697, t = 7.5218
+2026-11-15 22:27:51,873 [INFO] Global finite-sample scaling factor: 1.0248
+2026-11-15 22:27:52,754 [INFO] Test 1 (Null-Restricted WCB for beta_5 = 0, True Null): p-value = 0.5500
+2026-11-15 22:27:52,754 [INFO]   Result: PASSED (Null retained at alpha=0.05)
+2026-11-15 22:27:53,560 [INFO] Test 2 (Null-Restricted WCB for beta_2 < 0, False Null): p-value = 0.0020
+2026-11-15 22:27:53,560 [INFO]   Result: PASSED (Null rejected strongly at alpha=0.01)
+2026-11-15 22:28:19,307 [INFO] ======================================================================
+2026-11-15 22:28:19,308 [INFO] RUNNING BOOTSTRAP VERIFICATION SUITE ON SYNTHETIC CLUSTERED DATA
+2026-11-15 22:28:19,308 [INFO] ======================================================================
+2026-11-15 22:28:19,317 [INFO] Generated synthetic dataset: N = 520 observations across G = 26 clusters.
+2026-11-15 22:28:19,322 [INFO] Unrestricted OLS Sample Estimates (True: beta_1=2.0, beta_2=-3.0, beta_5=0.0):
+2026-11-15 22:28:19,322 [INFO]   const: b = 9.4998, SE_CRSE = 0.9469, t = 10.0322
+2026-11-15 22:28:19,322 [INFO]   x: b = 1.8816, SE_CRSE = 1.1421, t = 1.6475
+2026-11-15 22:28:19,322 [INFO]   x2: b = -2.4897, SE_CRSE = 0.7862, t = -3.1667
+2026-11-15 22:28:19,322 [INFO]   x_bar: b = 0.1561, SE_CRSE = 0.7520, t = 0.2076
+2026-11-15 22:28:19,322 [INFO]   x_inter: b = -0.9746, SE_CRSE = 1.5967, t = -0.6104
+2026-11-15 22:28:19,323 [INFO]   log_s: b = 0.5243, SE_CRSE = 0.0697, t = 7.5218
+2026-11-15 22:28:19,323 [INFO] Global finite-sample scaling factor: 1.0248
+2026-11-15 22:28:20,235 [INFO] Test 1 (Null-Restricted WCB for beta_5 = 0, True Null): p-value = 0.5500
+2026-11-15 22:28:20,235 [INFO]   Result: PASSED (Null retained at alpha=0.05)
+2026-11-15 22:28:21,167 [INFO] Test 2 (Null-Restricted WCB for beta_2 < 0, False Null): p-value = 0.0020
+2026-11-15 22:28:21,167 [INFO]   Result: PASSED (Null rejected strongly at alpha=0.01)
+2026-11-15 22:28:22,219 [INFO] Unrestricted Bootstrap 95% Percentile Confidence Intervals:
+2026-11-15 22:28:22,220 [INFO]   beta_1 (True: 2.0): [0.1355, 3.3869]
+2026-11-15 22:28:22,220 [INFO]   beta_2 (True: -3.0): [-3.6091, -1.3055]
+2026-11-15 22:28:22,220 [INFO]   beta_5 (True: 0.0): [-3.5079, 1.7121]
+2026-11-15 22:28:22,220 [INFO] Test 3 Coverage Check: PASSED (All true values covered by 95% CIs)
+2026-11-15 22:28:22,221 [INFO] Contraction Ratio Evaluation: Median = 0.2469, P(rho < 1) = 0.9920, Non-concave draws = 0/500
+2026-11-15 22:28:22,244 [INFO] Test 4 (Seed Reproducibility Check): Max discrepancy = 0.0000000000 -> PASSED
+2026-11-15 22:28:22,245 [INFO] Saved verification report: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\bootstrap_verification_report.json
+2026-11-15 22:28:22,245 [INFO] ======================================================================
+2026-11-15 22:28:22,245 [INFO] BOOTSTRAP VERIFICATION COMPLETED SUCCESSFULLY.
+2026-11-15 22:28:22,245 [INFO] ======================================================================

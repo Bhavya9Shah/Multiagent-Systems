@@ -1,0 +1,63 @@
+{
+  "dataset_specs": {
+    "n_clusters": 26,
+    "n_observations": 520,
+    "videos_per_cluster": 20
+  },
+  "true_parameters": {
+    "beta_0": 10.0,
+    "beta_1": 2.0,
+    "beta_2": -3.0,
+    "beta_3": -0.8,
+    "beta_5": 0.0,
+    "beta_4": 0.5
+  },
+  "sample_estimates": {
+    "const": 9.499778716963643,
+    "x": 1.8815569416145337,
+    "x2": -2.489699788210366,
+    "x_bar": 0.15611595088697428,
+    "x_inter": -0.9745729162276753,
+    "log_s": 0.5242881899487517
+  },
+  "global_scaling_factor": 1.0247520341611964,
+  "test_1_beta5_null_restricted_p_value": 0.55,
+  "test_1_passed": true,
+  "test_2_beta2_one_sided_p_value": 0.002,
+  "test_2_passed": true,
+  "test_3_confidence_intervals": {
+    "const": {
+      "lower": 8.94078945125749,
+      "upper": 10.10202324061061
+    },
+    "x": {
+      "lower": 0.13549896537827577,
+      "upper": 3.3869440418964443
+    },
+    "x2": {
+      "lower": -3.609058974841329,
+      "upper": -1.305540345823195
+    },
+    "x_bar": {
+      "lower": -1.1274951611341872,
+      "upper": 1.3294630691604896
+    },
+    "x_inter": {
+      "lower": -3.507879956669719,
+      "upper": 1.7121320591866966
+    },
+    "log_s": {
+      "lower": 0.5227738010584828,
+      "upper": 0.5257674766816199
+    }
+  },
+  "test_3_coverage_passed": true,
+  "test_4_seed_reproducibility_passed": true,
+  "contraction_ratio_summary": {
+    "median": 0.24694224183702118,
+    "p_rho_less_1": 0.992,
+    "non_concave_draws": 0,
+    "total_draws": 500
+  },
+  "all_tests_passed": true
+}

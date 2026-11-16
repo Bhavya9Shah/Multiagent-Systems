@@ -1,0 +1,7 @@
+model_name,n_folds,cv_method,oos_rmse,oos_mae,oos_r_squared,mean_channel_rmse,std_channel_rmse
+Model_1_OwnScore,38,Strict Leave-One-Channel-Out (No Data Leakage),2.5567,1.9892,-0.1134,2.1039,1.4357
+Model_2_Quadratic,38,Strict Leave-One-Channel-Out (No Data Leakage),2.4665,1.9218,-0.0363,2.106,1.272
+Model_3_CompetitorAvg,38,Strict Leave-One-Channel-Out (No Data Leakage),2.4684,1.9245,-0.0379,2.1054,1.2731
+Model_4_StrategicInteraction,38,Strict Leave-One-Channel-Out (No Data Leakage),2.479,1.931,-0.0468,2.1113,1.2815
+Model_5_FullProposed,38,Strict Leave-One-Channel-Out (No Data Leakage),1.5817,1.2545,0.5739,1.3949,0.7298
+Robustness_NoSubscribers,38,Strict Leave-One-Channel-Out (No Data Leakage),2.4798,1.8696,-0.0475,2.0667,1.333

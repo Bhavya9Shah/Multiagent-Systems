@@ -1,0 +1,27 @@
+2026-11-16 21:27:37,736 [INFO] ======================================================================
+2026-11-16 21:27:37,736 [INFO] STEP 4: LEAK-FREE 26-FOLD WITHIN-TRAIN LOCO-CV
+2026-11-16 21:27:37,736 [INFO] ======================================================================
+2026-11-16 21:27:37,754 [INFO] Loaded Training Sample: N = 541 videos across G = 26 channels.
+2026-11-16 21:27:37,754 [INFO] Beginning 26 cross-validation iterations (Leave-One-Channel-Out)...
+2026-11-16 21:27:40,894 [INFO] Completed Fold 05/26: ErikTheElectric (5 vids)
+2026-11-16 21:27:44,044 [INFO] Completed Fold 10/26: JOLLY (23 vids)
+2026-11-16 21:27:47,239 [INFO] Completed Fold 15/26: Ludwig (25 vids)
+2026-11-16 21:27:50,410 [INFO] Completed Fold 20/26: Raina Huang (24 vids)
+2026-11-16 21:27:53,627 [INFO] Completed Fold 25/26: Zach King (14 vids)
+2026-11-16 21:27:54,256 [INFO] Completed Fold 26/26: Zermatt Neo (25 vids)
+2026-11-16 21:27:54,256 [INFO] 
+======================================================================
+2026-11-16 21:27:54,256 [INFO] POOLED LEAVE-ONE-CHANNEL-OUT (LOCO) CROSS-VALIDATION SUMMARY:
+2026-11-16 21:27:54,256 [INFO] Total Evaluated Observations: N = 541, SST_OOS = 3135.25
+2026-11-16 21:27:54,256 [INFO] ======================================================================
+2026-11-16 21:27:54,261 [INFO] Model_0_Baseline         : R²_OOS = 0.5741 | RMSE = 1.5710 | MAE = 1.2963 | Median Ch MAE = 1.2248 (IQR = 1.1648)
+2026-11-16 21:27:54,262 [INFO] Model_1_Linear           : R²_OOS = 0.5708 | RMSE = 1.5771 | MAE = 1.3056 | Median Ch MAE = 1.2948 (IQR = 1.1269)
+2026-11-16 21:27:54,262 [INFO] Model_2_Quadratic        : R²_OOS = 0.5600 | RMSE = 1.5969 | MAE = 1.3215 | Median Ch MAE = 1.3320 (IQR = 1.1229)
+2026-11-16 21:27:54,262 [INFO] Model_3_PeerCongestion   : R²_OOS = 0.5589 | RMSE = 1.5988 | MAE = 1.3225 | Median Ch MAE = 1.3309 (IQR = 1.1133)
+2026-11-16 21:27:54,262 [INFO] Model_4_Interaction      : R²_OOS = 0.5565 | RMSE = 1.6031 | MAE = 1.3280 | Median Ch MAE = 1.3341 (IQR = 1.1339)
+2026-11-16 21:27:54,263 [INFO] Model_5_FullTags         : R²_OOS = 0.5440 | RMSE = 1.6257 | MAE = 1.3401 | Median Ch MAE = 1.2988 (IQR = 1.0986)
+2026-11-16 21:27:54,267 [INFO] Saved fold-level LOCO-CV results: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\loco_cv_fold_results.csv
+2026-11-16 21:27:54,267 [INFO] Saved aggregate LOCO-CV summary: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\results\loco_cv_aggregate_summary.csv
+2026-11-16 21:27:54,267 [INFO] ======================================================================
+2026-11-16 21:27:54,267 [INFO] STEP 4 COMPLETED SUCCESSFULLY: LOCO-CV EVALUATED ON 26 TRAINING FOLDS
+2026-11-16 21:27:54,267 [INFO] ======================================================================

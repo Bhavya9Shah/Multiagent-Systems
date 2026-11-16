@@ -1,0 +1,33 @@
+2026-11-15 22:26:41,059 [INFO] ======================================================================
+2026-11-15 22:26:41,059 [INFO] STEP 1: DATA INGESTION, AUDIT & FEATURE PREPARATION
+2026-11-15 22:26:41,059 [INFO] ======================================================================
+2026-11-15 22:26:41,083 [INFO] Using Score CSV: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\Click appeal score\scores\video_scores.csv
+2026-11-15 22:26:41,083 [INFO] Using Clean Metadata CSV: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\Click appeal score\data\processed\cleaned_videos.csv
+2026-11-15 22:26:41,104 [INFO] Loaded scores: 809 rows, 39 cols
+2026-11-15 22:26:41,104 [INFO] Loaded clean metadata: 809 rows, 16 cols
+2026-11-15 22:26:41,107 [INFO] âœ“ Video ID 1:1 match verified: Exactly 809 overlapping unique videos.
+2026-11-15 22:26:41,113 [INFO] Minimum view count in sample: 898
+2026-11-15 22:26:41,126 [INFO] --------------------------------------------------
+2026-11-15 22:26:41,126 [INFO] SUMMARY STATISTICS OF PREPARED VARIABLES (N = 809):
+2026-11-15 22:26:41,149 [INFO] 
+                     count          mean           std            min           50%           max
+views                809.0  1.328356e+07  3.919292e+07     898.000000  1.297727e+06  3.363310e+08
+log_views            809.0  1.413293e+01  2.293757e+00       6.800170  1.407612e+01  1.963361e+01
+x                    809.0  3.923947e-01  1.037099e-01       0.005439  3.914060e-01  6.843300e-01
+x2                   809.0  1.647160e-01  8.051483e-02       0.000030  1.531987e-01  4.683075e-01
+subscribers_channel  809.0  3.425808e+07  9.088653e+07  118000.000000  7.100000e+06  5.260000e+08
+log_subscribers      809.0  1.590093e+01  1.713290e+00      11.678440  1.577561e+01  2.008081e+01
+duration_sec         809.0  2.140839e+03  3.529042e+03     181.000000  1.305000e+03  5.925100e+04
+log_duration         809.0  7.257769e+00  7.856551e-01       5.198497  7.173958e+00  1.098954e+01
+age_days             809.0  4.097244e+02  2.265567e+02      30.000000  4.200000e+02  7.590000e+02
+tags_count           809.0  1.733745e+01  1.481181e+01       0.000000  1.600000e+01  6.300000e+01
+2026-11-15 22:26:41,150 [INFO] Unique Channels by Tier:
+subscriber_tier
+Tier_1_Low (<5M)       12
+Tier_2_Mid (5M-20M)    16
+Tier_3_Mega (>20M)     10
+2026-11-15 22:26:41,189 [INFO] Saved processed payoff dataset: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\data\processed_payoff_data.csv (809 rows)
+2026-11-15 22:26:41,193 [INFO] Saved comprehensive data dictionary: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\data\data_dictionary.csv
+2026-11-15 22:26:41,193 [INFO] ======================================================================
+2026-11-15 22:26:41,193 [INFO] STEP 1 COMPLETED SUCCESSFULLY: DATASET VALIDATED & PREPARED (N = 809)
+2026-11-15 22:26:41,194 [INFO] ======================================================================

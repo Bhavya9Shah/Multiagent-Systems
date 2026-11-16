@@ -1,0 +1,49 @@
+2026-11-16 21:33:33,430 [INFO] ===========================================================================
+2026-11-16 21:33:33,430 [INFO] STEP 6: FINAL HOLDOUT EVALUATION ON 6 TEST CHANNELS (132 VIDEOS)
+2026-11-16 21:33:33,430 [INFO] ===========================================================================
+2026-11-16 21:33:33,431 [INFO] METHODOLOGICAL DISCLOSURE:
+All 809 observations were analyzed during initial exploratory Phase 1 analyses before
+the channel-stratified train/validation/test split protocol was formalized. Therefore,
+this test evaluation serves as an internal holdout generalization check of the locked
+model specification (Model 4-Centered) rather than a pure ex-ante pre-registered trial.
+2026-11-16 21:33:33,449 [INFO] Combined Estimation Sample (Train + Val): N = 677 videos across G = 32 channels.
+2026-11-16 21:33:33,449 [INFO] Held-Out Test Sample: N = 132 videos across G = 6 channels.
+2026-11-16 21:33:33,449 [INFO] Constructing peer appeal for Train+Val sample (LOCO across 32 channels)...
+2026-11-16 21:33:34,250 [INFO] Constructing peer appeal for Test sample (strictly from 32 Train+Val channels)...
+2026-11-16 21:33:34,388 [INFO] Train+Val Centering Parameters: mu_x = 0.393912, mu_xbar = 0.393521, y_trainval_mean = 14.045068
+2026-11-16 21:33:34,390 [INFO] 
+Refitting on Train+Val (32 Channels) and Evaluating on Test (6 Channels)...
+2026-11-16 21:33:34,396 [INFO] Model_0_Baseline         : R²_OOS = 0.7535 | RMSE = 1.1386 | MAE = 0.9170
+2026-11-16 21:33:34,402 [INFO] Model_1_Linear           : R²_OOS = 0.7473 | RMSE = 1.1528 | MAE = 0.9334
+2026-11-16 21:33:34,407 [INFO] Model_2_Quadratic        : R²_OOS = 0.7519 | RMSE = 1.1422 | MAE = 0.9254
+2026-11-16 21:33:34,412 [INFO] Model_3_PeerCongestion   : R²_OOS = 0.7534 | RMSE = 1.1388 | MAE = 0.9193
+2026-11-16 21:33:34,418 [INFO] Model_4_Interaction      : R²_OOS = 0.7537 | RMSE = 1.1382 | MAE = 0.9190 [LOCKED SPECIFICATION]
+2026-11-16 21:33:34,423 [INFO] Model_5_FullTags         : R²_OOS = 0.7559 | RMSE = 1.1332 | MAE = 0.9103
+2026-11-16 21:33:34,424 [INFO] 
+===========================================================================
+2026-11-16 21:33:34,424 [INFO] REFITTED MODEL 4-CENTERED ESTIMATES (TRAIN + VAL SAMPLE, G = 32, N = 677)
+2026-11-16 21:33:34,424 [INFO] ===========================================================================
+2026-11-16 21:33:34,425 [INFO]   const             : Coef =    -2.3739 | SE =     2.6538 | p = 0.3710
+2026-11-16 21:33:34,425 [INFO]   x_c               : Coef =    -0.7340 | SE =     2.1033 | p = 0.7271
+2026-11-16 21:33:34,425 [INFO]   x2_c              : Coef =    -8.1845 | SE =     9.1522 | p = 0.3712
+2026-11-16 21:33:34,425 [INFO]   x_bar_c           : Coef =     4.7800 | SE =     5.8790 | p = 0.4162
+2026-11-16 21:33:34,425 [INFO]   x_inter_c         : Coef =     6.1833 | SE =    52.2180 | p = 0.9057
+2026-11-16 21:33:34,425 [INFO]   log_subscribers   : Coef =     1.0047 | SE =     0.1331 | p = 0.0000
+2026-11-16 21:33:34,425 [INFO]   log_duration      : Coef =     0.0785 | SE =     0.2964 | p = 0.7910
+2026-11-16 21:33:34,425 [INFO]   age_days          : Coef =     0.0001 | SE =     0.0003 | p = 0.7721
+2026-11-16 21:33:34,426 [INFO] 
+===========================================================================
+2026-11-16 21:33:34,426 [INFO] LOCKED MODEL 4-CENTERED TEST CHANNEL-BY-CHANNEL ERROR DISPERSION
+2026-11-16 21:33:34,426 [INFO] ===========================================================================
+2026-11-16 21:33:34,426 [INFO]   Airrack            (Tier_2_Mid (5M-20M), 19,600,000 subs, N=22): MAE = 1.0671 | RMSE = 1.1733 | Bias = +0.9836
+2026-11-16 21:33:34,427 [INFO]   Foodie We          (Tier_1_Low (<5M), 2,510,000 subs, N=24): MAE = 0.5334 | RMSE = 0.6046 | Bias = +0.2152
+2026-11-16 21:33:34,427 [INFO]   How Ridiculous     (Tier_3_Mega (>20M), 23,900,000 subs, N=24): MAE = 1.0823 | RMSE = 1.2951 | Bias = -1.0750
+2026-11-16 21:33:34,427 [INFO]   Joel Hansen        (Tier_1_Low (<5M), 1,170,000 subs, N=24): MAE = 1.0145 | RMSE = 1.4218 | Bias = -0.3628
+2026-11-16 21:33:34,427 [INFO]   Matt Stonie        (Tier_2_Mid (5M-20M), 16,400,000 subs, N=15): MAE = 0.6911 | RMSE = 0.7646 | Bias = -0.2466
+2026-11-16 21:33:34,427 [INFO]   Stokes Twins       (Tier_3_Mega (>20M), 150,000,000 subs, N=23): MAE = 1.0581 | RMSE = 1.2233 | Bias = +0.9557
+2026-11-16 21:33:34,430 [INFO] 
+===========================================================================
+2026-11-16 21:33:34,430 [INFO] Saved test evaluation summary: C:\Users\bhavy\OneDrive\Desktop\Multiagent System\project\clickappeal_new\payoff_estimation\results\test_set_evaluation.csv
+2026-11-16 21:33:34,430 [INFO] Saved test channel dispersion: C:\Users\bhavy\OneDrive\Desktop\Multiagent System\project\clickappeal_new\payoff_estimation\results\test_channel_dispersion.csv
+2026-11-16 21:33:34,430 [INFO] STEP 6 COMPLETED SUCCESSFULLY: HOLDOUT EVALUATION COMPLETE
+2026-11-16 21:33:34,430 [INFO] ===========================================================================

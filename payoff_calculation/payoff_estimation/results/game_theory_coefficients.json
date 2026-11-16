@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "project": "Click Appeal as a Potential Game: Modeling Creator Incentives, Attention Congestion, and Social Welfare in YouTube",
+    "component": "Empirical Payoff Function Estimation",
+    "course": "CS 329 Multi-Agent Systems, IIT Gandhinagar",
+    "authors": "Bhavya Shah (24110324) - Payoff Estimation | Khushi Shah (24110326) - Game Theory",
+    "calibration_status": "Post-Test Final Full-Sample Calibration (N = 809 videos, G = 38 channels)",
+    "locked_specification": "Model 4-Centered: Strategic Payoff Function with Contemporaneous Peer Appeal"
+  },
+  "sample_summary": {
+    "total_observations_N": 809,
+    "total_channels_G": 38,
+    "mean_videos_per_channel": 21.289473684210527,
+    "centering_mu_x": 0.39239470580964153,
+    "centering_mu_xbar": 0.39138986963688116,
+    "peer_window_days": 60,
+    "peer_window_description": "Contemporaneous rolling 60-day window [t - 30d, t + 30d], LOCO across channels",
+    "subscribers_snapshot_note": "Subscriber count measured as late-2026 snapshot; acts as time-invariant channel scale control"
+  },
+  "locked_centered_coefficients": {
+    "specification": "ln(V_it) = beta_0_c + beta_1_c*(x - mu_x) + beta_2_c*(x - mu_x)^2 + beta_3_c*(x_bar - mu_xbar) + beta_5_c*(x - mu_x)*(x_bar - mu_xbar) + gamma_s*ln(s_i) + gamma_d*ln(dur_it) + gamma_a*age_it + eps_it",
+    "beta_0_c_intercept": -2.7904402468278455,
+    "beta_1_c_own_appeal_at_mean": -0.3135297005865514,
+    "beta_2_c_quadratic_curvature": -8.197369064002235,
+    "beta_3_c_peer_congestion_at_mean": 2.617178231167514,
+    "beta_5_c_strategic_interaction": 20.794249907773402,
+    "gamma_subscribers": 1.0417303162390181,
+    "gamma_duration": 0.04539869027386549,
+    "gamma_age_days": 0.0002953209480532577
+  },
+  "uncentered_reference_coefficients": {
+    "specification": "ln(V_it) = beta_0 + beta_1*x_it + beta_2*x_it^2 + beta_3*x_bar_(-i,t) + beta_5*x_it*x_bar_(-i,t) + gamma_s*ln(s_i) + gamma_d*ln(dur_it) + gamma_a*age_it + eps_it",
+    "beta_0_intercept": -1.7603617563732825,
+    "beta_1_own_appeal": -2.0189800166253535,
+    "beta_2_quadratic_own_appeal": -8.19736906400218,
+    "beta_3_peer_appeal": -5.54237534392816,
+    "beta_5_interaction": 20.79424990778103,
+    "note_on_equivalence": "beta_2 and beta_5 are numerically identical between centered and uncentered models"
+  },
+  "statistical_inference": {
+    "cluster_robust_standard_errors": {
+      "se_beta_0_c": 2.416793206575689,
+      "se_beta_1_c": 1.9191011206841946,
+      "se_beta_2_c": 8.299407366719604,
+      "se_beta_3_c": 6.038613874271168,
+      "se_beta_5_c": 60.22602538361707,
+      "se_gamma_subs": 0.11473605366396031,
+      "se_gamma_dur": 0.2534277171114793,
+      "se_gamma_age": 0.0002916016959743716
+    },
+    "hypothesis_test_diminishing_returns_concavity": {
+      "null_hypothesis": "H0: beta_2 >= 0 (no diminishing returns)",
+      "alternative_hypothesis": "H1: beta_2 < 0 (strictly concave revenue)",
+      "crse_t_statistic": -0.9877053507306388,
+      "student_t_p_value_df37": 0.16485617554095058,
+      "wild_cluster_bootstrap_p_value": 0.248,
+      "rejection_at_alpha_0_05": false,
+      "interpretation": "Concavity is NOT statistically established at alpha=0.05. Point estimate beta_2 < 0 must be treated as calibrated benchmark."
+    },
+    "hypothesis_test_strategic_interaction": {
+      "null_hypothesis": "H0: beta_5 = 0 (no strategic interaction)",
+      "alternative_hypothesis": "H1: beta_5 != 0 (strategic interdependence)",
+      "crse_t_statistic": 0.3452701680929776,
+      "student_t_p_value_df37": 0.7318465233169236,
+      "wild_cluster_bootstrap_p_value": 0.7835,
+      "rejection_at_alpha_0_05": false,
+      "interpretation": "Strategic interaction is statistically insignificant (p > 0.05). Packaging effects carry substantial residual uncertainty."
+    },
+    "strategic_covariance_matrix_order": [
+      "x_c",
+      "x2_c",
+      "x_bar_c",
+      "x_inter_c"
+    ],
+    "strategic_covariance_matrix": [
+      [
+        3.6829491114113315,
+        11.947567999491321,
+        -4.16068994417424,
+        -62.65742524532658
+      ],
+      [
+        11.947567999491348,
+        68.88016263875964,
+        -16.00515965027188,
+        -316.41740231579104
+      ],
+      [
+        -4.160689944174238,
+        -16.005159650271764,
+        36.46485752254025,
+        92.67818137489812
+      ],
+      [
+        -62.65742524532658,
+        -316.41740231579035,
+        92.6781813748981,
+        3627.1741335080874
+      ]
+    ]
+  },
+  "game_theoretic_properties": {
+    "game_class": "Continuous Aggregative Potential Game",
+    "exact_potential_function": "Phi(x_1, ..., x_N) = sum_i [ beta_1_c*(x_i - mu_x) + beta_2_c*(x_i - mu_x)^2 ] + [beta_5_c / (2*(N-1))] * sum_i sum_{j != i} (x_i - mu_x)*(x_j - mu_xbar) - sum_i C_i(x_i)",
+    "best_response_equation": "BR_i(x_{-i}) = argmax_{x_i in [0, 1]} [ ln V_i(x_i, x_bar_{-i}) - C_i(x_i) ]",
+    "first_order_condition": "beta_1_c + 2*beta_2_c*(x_i - mu_x) + beta_5_c*(x_bar_{-i} - mu_xbar) - C_i'(x_i) = 0",
+    "contraction_mapping_audit": {
+      "formula": "rho = |beta_5| / (2 * |beta_2|)",
+      "sample_point_estimate_rho": 1.268349012068327,
+      "contraction_satisfied_on_point_estimates": false,
+      "bootstrap_concave_fraction": 1.0,
+      "bootstrap_p_rho_less_1_given_concave": 0.324,
+      "bootstrap_p_both_concave_and_contraction": 0.324,
+      "bootstrap_rho_quantiles": {
+        "p10": 0.2982421167610886,
+        "p25": 0.761148526360224,
+        "p50_median": 1.6433714048719963,
+        "p75": 2.852385695164491,
+        "p90": 4.491190321081053
+      }
+    },
+    "production_cost_guidance_for_game_theory_agent": {
+      "specification_recommendation": "C_i(x_i) = c_i * x_i + 0.5 * kappa_i * x_i^2",
+      "boundary_warning": "Because empirical beta_2 has high variance, setting kappa_i > 0 guarantees strict game concavity (2*beta_2 - kappa_i < 0) for all creators even in regions where empirical beta_2 fluctuates.",
+      "equilibrium_uniqueness": "When 2*|beta_2| + kappa_min > |beta_5|, best-response dynamics form a contraction mapping, guaranteeing a unique pure-strategy Nash Equilibrium."
+    }
+  }
+}

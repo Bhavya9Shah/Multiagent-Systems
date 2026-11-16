@@ -1,0 +1,504 @@
+{
+  "metadata": {
+    "random_seed": 42,
+    "split_methodology": "Subscriber-tier stratified channel-level random sampling",
+    "total_channels": 38,
+    "total_videos": 809,
+    "partition_channel_sizes": {
+      "train": 26,
+      "validation": 6,
+      "test": 6
+    },
+    "partition_video_sizes": {
+      "train": 541,
+      "validation": 136,
+      "test": 132
+    },
+    "tier_distribution": {
+      "Tier_1_Low (<5M)": {
+        "total": 12,
+        "train": 8,
+        "validation": 2,
+        "test": 2,
+        "total_videos": 255,
+        "train_videos": 157,
+        "val_videos": 50,
+        "test_videos": 48
+      },
+      "Tier_2_Mid (5M-20M)": {
+        "total": 16,
+        "train": 11,
+        "validation": 3,
+        "test": 2,
+        "total_videos": 335,
+        "train_videos": 235,
+        "val_videos": 63,
+        "test_videos": 37
+      },
+      "Tier_3_Mega (>20M)": {
+        "total": 10,
+        "train": 7,
+        "validation": 1,
+        "test": 2,
+        "total_videos": 219,
+        "train_videos": 149,
+        "val_videos": 23,
+        "test_videos": 47
+      }
+    }
+  },
+  "peer_pool_isolation_rules": {
+    "training_observations": {
+      "eligible_pool_size": 26,
+      "description": "Competitor peer averages for training videos are constructed strictly among the other 25 training channels (Train \\ {i}). Validation and test channels are completely excluded.",
+      "eligible_channel_ids": [
+        "UCbCJmNKAL85O1VFeD6Wj60g",
+        "UCc9CjaAjsMMvaSghZB7-Kog",
+        "UCxOzbkk0bdVl6-tH1Fcajfg",
+        "UCRijo3ddMTht_IHyNSNXpNQ",
+        "UC6huXz0F6-7KA7-mW0jdejA",
+        "UCshfkdpahG1U4vKIDjE4D0Q",
+        "UCspJ-h5Mw9_zeEhJDzMpkkA",
+        "UC4PooiX37Pld1T8J5SYT-SQ",
+        "UCfE5Cz44GlZVyoaYTHJbuZw",
+        "UCOgGAfSUy5LvEyVS_LF5kdw",
+        "UCQIUhhcmXsu6cN6n3y9-Pww",
+        "UChBEbMKI1eCcejTtmI32UEw",
+        "UCyfrEmiyq0Bv46gpxKTMcQg",
+        "UC0dlQ2xYj2kw7BiE1HAygLw",
+        "UCrPseYLGpNygVi34QpGNqpA",
+        "UCY1kMZp36IQSyNx_9h4mpCg",
+        "UC0cetNiKohjriHxbDYfLcpw",
+        "UCX6OQ3DkcsbYNE6H8uQQuVA",
+        "UCdcUmdOxMrhRjKMw-BX19AA",
+        "UCFahBOND03FOwD3FXNLeaBg",
+        "UCDogdKl7t7NHzQ95aEwkdMw",
+        "UCuAHfJyWROB4XRReS43EWUw",
+        "UCpi8TJfiA4lKGkaXs__YdBA",
+        "UCvK4bOhULCpmLabd2pDMtnA",
+        "UCq8DICunczvLuJJq414110A",
+        "UCZlUAff0s1IbMJlIDrw3TKQ"
+      ]
+    },
+    "validation_observations": {
+      "eligible_pool_size": 26,
+      "description": "Competitor peer averages for validation videos are constructed strictly using the 26 training channels as the competitor pool. Validation channels do not compete against each other or test channels.",
+      "eligible_channel_ids": [
+        "UCbCJmNKAL85O1VFeD6Wj60g",
+        "UCc9CjaAjsMMvaSghZB7-Kog",
+        "UCxOzbkk0bdVl6-tH1Fcajfg",
+        "UCRijo3ddMTht_IHyNSNXpNQ",
+        "UC6huXz0F6-7KA7-mW0jdejA",
+        "UCshfkdpahG1U4vKIDjE4D0Q",
+        "UCspJ-h5Mw9_zeEhJDzMpkkA",
+        "UC4PooiX37Pld1T8J5SYT-SQ",
+        "UCfE5Cz44GlZVyoaYTHJbuZw",
+        "UCOgGAfSUy5LvEyVS_LF5kdw",
+        "UCQIUhhcmXsu6cN6n3y9-Pww",
+        "UChBEbMKI1eCcejTtmI32UEw",
+        "UCyfrEmiyq0Bv46gpxKTMcQg",
+        "UC0dlQ2xYj2kw7BiE1HAygLw",
+        "UCrPseYLGpNygVi34QpGNqpA",
+        "UCY1kMZp36IQSyNx_9h4mpCg",
+        "UC0cetNiKohjriHxbDYfLcpw",
+        "UCX6OQ3DkcsbYNE6H8uQQuVA",
+        "UCdcUmdOxMrhRjKMw-BX19AA",
+        "UCFahBOND03FOwD3FXNLeaBg",
+        "UCDogdKl7t7NHzQ95aEwkdMw",
+        "UCuAHfJyWROB4XRReS43EWUw",
+        "UCpi8TJfiA4lKGkaXs__YdBA",
+        "UCvK4bOhULCpmLabd2pDMtnA",
+        "UCq8DICunczvLuJJq414110A",
+        "UCZlUAff0s1IbMJlIDrw3TKQ"
+      ]
+    },
+    "test_observations": {
+      "eligible_pool_size": 32,
+      "description": "Competitor peer averages for held-out test videos are constructed strictly using the pooled 32 training + validation channels (Train \u222a Val). Test channels never compete against each other or enter training pools.",
+      "eligible_channel_ids": [
+        "UCbCJmNKAL85O1VFeD6Wj60g",
+        "UCc9CjaAjsMMvaSghZB7-Kog",
+        "UCxOzbkk0bdVl6-tH1Fcajfg",
+        "UCRijo3ddMTht_IHyNSNXpNQ",
+        "UC6huXz0F6-7KA7-mW0jdejA",
+        "UCshfkdpahG1U4vKIDjE4D0Q",
+        "UCspJ-h5Mw9_zeEhJDzMpkkA",
+        "UC4PooiX37Pld1T8J5SYT-SQ",
+        "UCfE5Cz44GlZVyoaYTHJbuZw",
+        "UCOgGAfSUy5LvEyVS_LF5kdw",
+        "UCQIUhhcmXsu6cN6n3y9-Pww",
+        "UChBEbMKI1eCcejTtmI32UEw",
+        "UCyfrEmiyq0Bv46gpxKTMcQg",
+        "UC0dlQ2xYj2kw7BiE1HAygLw",
+        "UCrPseYLGpNygVi34QpGNqpA",
+        "UCY1kMZp36IQSyNx_9h4mpCg",
+        "UC0cetNiKohjriHxbDYfLcpw",
+        "UCX6OQ3DkcsbYNE6H8uQQuVA",
+        "UCdcUmdOxMrhRjKMw-BX19AA",
+        "UCFahBOND03FOwD3FXNLeaBg",
+        "UCDogdKl7t7NHzQ95aEwkdMw",
+        "UCuAHfJyWROB4XRReS43EWUw",
+        "UCpi8TJfiA4lKGkaXs__YdBA",
+        "UCvK4bOhULCpmLabd2pDMtnA",
+        "UCq8DICunczvLuJJq414110A",
+        "UCZlUAff0s1IbMJlIDrw3TKQ",
+        "UCb31gOY6OD8ES0zP8M0GhAw",
+        "UCGGZ_POGmIWG1pQXTDzQv-g",
+        "UCMyOj6fhvKFMjxUCp3b_3gA",
+        "UCMJlGrPk73l9U6qahc8D_gA",
+        "UCfyehHM_eo4g5JUyWmms2LA",
+        "UCVidr_Df7gMAcLB2HBe1ZOA"
+      ]
+    },
+    "post_test_calibration": {
+      "eligible_pool_size": 38,
+      "description": "For post-test descriptive structural calibration on the entire dataset, competitor peer averages are constructed among all 37 other channels (All \\ {i}).",
+      "eligible_channel_ids": [
+        "UC0cetNiKohjriHxbDYfLcpw",
+        "UC0dlQ2xYj2kw7BiE1HAygLw",
+        "UC4PooiX37Pld1T8J5SYT-SQ",
+        "UC5f5IV0Bf79YLp_p9nfInRA",
+        "UC6huXz0F6-7KA7-mW0jdejA",
+        "UCDogdKl7t7NHzQ95aEwkdMw",
+        "UCFahBOND03FOwD3FXNLeaBg",
+        "UCGGZ_POGmIWG1pQXTDzQv-g",
+        "UCGtu9J8Hp5lOOdNR4_nZa2Q",
+        "UCMJlGrPk73l9U6qahc8D_gA",
+        "UCMyOj6fhvKFMjxUCp3b_3gA",
+        "UCOgGAfSUy5LvEyVS_LF5kdw",
+        "UCQIUhhcmXsu6cN6n3y9-Pww",
+        "UCRijo3ddMTht_IHyNSNXpNQ",
+        "UCVidr_Df7gMAcLB2HBe1ZOA",
+        "UCX6OQ3DkcsbYNE6H8uQQuVA",
+        "UCY1kMZp36IQSyNx_9h4mpCg",
+        "UCZlUAff0s1IbMJlIDrw3TKQ",
+        "UC_9I8ulL_v4SvsXwiVKlzqw",
+        "UCb31gOY6OD8ES0zP8M0GhAw",
+        "UCbCJmNKAL85O1VFeD6Wj60g",
+        "UCbp9MyKCTEww4CxEzc_Tp0Q",
+        "UCc9CjaAjsMMvaSghZB7-Kog",
+        "UCd1fLoVFooPeWqCEYVUJZqg",
+        "UCdcUmdOxMrhRjKMw-BX19AA",
+        "UCfE5Cz44GlZVyoaYTHJbuZw",
+        "UCfyehHM_eo4g5JUyWmms2LA",
+        "UChBEbMKI1eCcejTtmI32UEw",
+        "UCpi8TJfiA4lKGkaXs__YdBA",
+        "UCq8DICunczvLuJJq414110A",
+        "UCrPseYLGpNygVi34QpGNqpA",
+        "UCshfkdpahG1U4vKIDjE4D0Q",
+        "UCspJ-h5Mw9_zeEhJDzMpkkA",
+        "UCuAHfJyWROB4XRReS43EWUw",
+        "UCvK4bOhULCpmLabd2pDMtnA",
+        "UCxOzbkk0bdVl6-tH1Fcajfg",
+        "UCyfrEmiyq0Bv46gpxKTMcQg",
+        "UCyps-v4WNjWDnYRKmZ4BUGw"
+      ]
+    }
+  },
+  "channels": [
+    {
+      "channel_id": "UCGtu9J8Hp5lOOdNR4_nZa2Q",
+      "channel_name": "Foodie We",
+      "subscriber_tier": "Tier_1_Low (<5M)",
+      "subscribers": 2510000,
+      "video_count": 24,
+      "partition": "test"
+    },
+    {
+      "channel_id": "UC_9I8ulL_v4SvsXwiVKlzqw",
+      "channel_name": "Joel Hansen",
+      "subscriber_tier": "Tier_1_Low (<5M)",
+      "subscribers": 1170000,
+      "video_count": 24,
+      "partition": "test"
+    },
+    {
+      "channel_id": "UCyps-v4WNjWDnYRKmZ4BUGw",
+      "channel_name": "Airrack",
+      "subscriber_tier": "Tier_2_Mid (5M-20M)",
+      "subscribers": 19600000,
+      "video_count": 22,
+      "partition": "test"
+    },
+    {
+      "channel_id": "UCd1fLoVFooPeWqCEYVUJZqg",
+      "channel_name": "Matt Stonie",
+      "subscriber_tier": "Tier_2_Mid (5M-20M)",
+      "subscribers": 16400000,
+      "video_count": 15,
+      "partition": "test"
+    },
+    {
+      "channel_id": "UC5f5IV0Bf79YLp_p9nfInRA",
+      "channel_name": "How Ridiculous",
+      "subscriber_tier": "Tier_3_Mega (>20M)",
+      "subscribers": 23900000,
+      "video_count": 24,
+      "partition": "test"
+    },
+    {
+      "channel_id": "UCbp9MyKCTEww4CxEzc_Tp0Q",
+      "channel_name": "Stokes Twins",
+      "subscriber_tier": "Tier_3_Mega (>20M)",
+      "subscribers": 150000000,
+      "video_count": 23,
+      "partition": "test"
+    },
+    {
+      "channel_id": "UCshfkdpahG1U4vKIDjE4D0Q",
+      "channel_name": "FreakEating",
+      "subscriber_tier": "Tier_1_Low (<5M)",
+      "subscribers": 118000,
+      "video_count": 12,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCspJ-h5Mw9_zeEhJDzMpkkA",
+      "channel_name": "Furious Pete",
+      "subscriber_tier": "Tier_1_Low (<5M)",
+      "subscribers": 4920000,
+      "video_count": 1,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCyfrEmiyq0Bv46gpxKTMcQg",
+      "channel_name": "Katina Eats Kilos",
+      "subscriber_tier": "Tier_1_Low (<5M)",
+      "subscribers": 1180000,
+      "video_count": 24,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UC0dlQ2xYj2kw7BiE1HAygLw",
+      "channel_name": "Leah Shutkever",
+      "subscriber_tier": "Tier_1_Low (<5M)",
+      "subscribers": 676000,
+      "video_count": 24,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UC0cetNiKohjriHxbDYfLcpw",
+      "channel_name": "Max vs Food",
+      "subscriber_tier": "Tier_1_Low (<5M)",
+      "subscribers": 151000,
+      "video_count": 25,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCFahBOND03FOwD3FXNLeaBg",
+      "channel_name": "Raina Huang",
+      "subscriber_tier": "Tier_1_Low (<5M)",
+      "subscribers": 1430000,
+      "video_count": 24,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCuAHfJyWROB4XRReS43EWUw",
+      "channel_name": "The Bucket List Family",
+      "subscriber_tier": "Tier_1_Low (<5M)",
+      "subscribers": 1530000,
+      "video_count": 22,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCZlUAff0s1IbMJlIDrw3TKQ",
+      "channel_name": "Zermatt Neo",
+      "subscriber_tier": "Tier_1_Low (<5M)",
+      "subscribers": 4630000,
+      "video_count": 25,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCc9CjaAjsMMvaSghZB7-Kog",
+      "channel_name": "BeardMeatsFood",
+      "subscriber_tier": "Tier_2_Mid (5M-20M)",
+      "subscribers": 6930000,
+      "video_count": 24,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCxOzbkk0bdVl6-tH1Fcajfg",
+      "channel_name": "Beta Squad",
+      "subscriber_tier": "Tier_2_Mid (5M-20M)",
+      "subscribers": 12200000,
+      "video_count": 23,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UC6huXz0F6-7KA7-mW0jdejA",
+      "channel_name": "ErikTheElectric",
+      "subscriber_tier": "Tier_2_Mid (5M-20M)",
+      "subscribers": 5420000,
+      "video_count": 5,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UC4PooiX37Pld1T8J5SYT-SQ",
+      "channel_name": "Good Mythical Morning",
+      "subscriber_tier": "Tier_2_Mid (5M-20M)",
+      "subscribers": 19800000,
+      "video_count": 25,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCfE5Cz44GlZVyoaYTHJbuZw",
+      "channel_name": "Guga Foods",
+      "subscriber_tier": "Tier_2_Mid (5M-20M)",
+      "subscribers": 5910000,
+      "video_count": 25,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCOgGAfSUy5LvEyVS_LF5kdw",
+      "channel_name": "JOLLY",
+      "subscriber_tier": "Tier_2_Mid (5M-20M)",
+      "subscribers": 5480000,
+      "video_count": 23,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UChBEbMKI1eCcejTtmI32UEw",
+      "channel_name": "Joshua Weissman",
+      "subscriber_tier": "Tier_2_Mid (5M-20M)",
+      "subscribers": 10800000,
+      "video_count": 25,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCrPseYLGpNygVi34QpGNqpA",
+      "channel_name": "Ludwig",
+      "subscriber_tier": "Tier_2_Mid (5M-20M)",
+      "subscribers": 7100000,
+      "video_count": 25,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCdcUmdOxMrhRjKMw-BX19AA",
+      "channel_name": "Niko Omilana",
+      "subscriber_tier": "Tier_2_Mid (5M-20M)",
+      "subscribers": 9030000,
+      "video_count": 13,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCpi8TJfiA4lKGkaXs__YdBA",
+      "channel_name": "The Try Guys",
+      "subscriber_tier": "Tier_2_Mid (5M-20M)",
+      "subscribers": 7860000,
+      "video_count": 24,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCvK4bOhULCpmLabd2pDMtnA",
+      "channel_name": "Yes Theory",
+      "subscriber_tier": "Tier_2_Mid (5M-20M)",
+      "subscribers": 10200000,
+      "video_count": 23,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCbCJmNKAL85O1VFeD6Wj60g",
+      "channel_name": "Bayashi TV",
+      "subscriber_tier": "Tier_3_Mega (>20M)",
+      "subscribers": 37500000,
+      "video_count": 21,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCRijo3ddMTht_IHyNSNXpNQ",
+      "channel_name": "Dude Perfect",
+      "subscriber_tier": "Tier_3_Mega (>20M)",
+      "subscribers": 62900000,
+      "video_count": 25,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCQIUhhcmXsu6cN6n3y9-Pww",
+      "channel_name": "Jesser",
+      "subscriber_tier": "Tier_3_Mega (>20M)",
+      "subscribers": 51100000,
+      "video_count": 24,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCY1kMZp36IQSyNx_9h4mpCg",
+      "channel_name": "Mark Rober",
+      "subscriber_tier": "Tier_3_Mega (>20M)",
+      "subscribers": 86200000,
+      "video_count": 17,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCX6OQ3DkcsbYNE6H8uQQuVA",
+      "channel_name": "MrBeast",
+      "subscriber_tier": "Tier_3_Mega (>20M)",
+      "subscribers": 526000000,
+      "video_count": 24,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCDogdKl7t7NHzQ95aEwkdMw",
+      "channel_name": "Sidemen",
+      "subscriber_tier": "Tier_3_Mega (>20M)",
+      "subscribers": 23400000,
+      "video_count": 24,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCq8DICunczvLuJJq414110A",
+      "channel_name": "Zach King",
+      "subscriber_tier": "Tier_3_Mega (>20M)",
+      "subscribers": 43600000,
+      "video_count": 14,
+      "partition": "train"
+    },
+    {
+      "channel_id": "UCMJlGrPk73l9U6qahc8D_gA",
+      "channel_name": "Randy Santel",
+      "subscriber_tier": "Tier_1_Low (<5M)",
+      "subscribers": 1850000,
+      "video_count": 25,
+      "partition": "validation"
+    },
+    {
+      "channel_id": "UCfyehHM_eo4g5JUyWmms2LA",
+      "channel_name": "Sorted Food",
+      "subscriber_tier": "Tier_1_Low (<5M)",
+      "subscribers": 3010000,
+      "video_count": 25,
+      "partition": "validation"
+    },
+    {
+      "channel_id": "UCb31gOY6OD8ES0zP8M0GhAw",
+      "channel_name": "Max Fosh",
+      "subscriber_tier": "Tier_2_Mid (5M-20M)",
+      "subscribers": 5230000,
+      "video_count": 23,
+      "partition": "validation"
+    },
+    {
+      "channel_id": "UCGGZ_POGmIWG1pQXTDzQv-g",
+      "channel_name": "Michelle Khare",
+      "subscriber_tier": "Tier_2_Mid (5M-20M)",
+      "subscribers": 5500000,
+      "video_count": 15,
+      "partition": "validation"
+    },
+    {
+      "channel_id": "UCVidr_Df7gMAcLB2HBe1ZOA",
+      "channel_name": "Wake'N'Bite",
+      "subscriber_tier": "Tier_2_Mid (5M-20M)",
+      "subscribers": 6750000,
+      "video_count": 25,
+      "partition": "validation"
+    },
+    {
+      "channel_id": "UCMyOj6fhvKFMjxUCp3b_3gA",
+      "channel_name": "Nick DiGiovanni",
+      "subscriber_tier": "Tier_3_Mega (>20M)",
+      "subscribers": 48500000,
+      "video_count": 23,
+      "partition": "validation"
+    }
+  ]
+}

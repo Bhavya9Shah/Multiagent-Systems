@@ -1,0 +1,32 @@
+2026-11-16 21:32:40,789 [INFO] ======================================================================
+2026-11-16 21:32:40,789 [INFO] STEP 5: MODEL SELECTION & VALIDATION EVALUATION (6 CHANNELS, 136 VIDEOS)
+2026-11-16 21:32:40,789 [INFO] ======================================================================
+2026-11-16 21:32:40,810 [INFO] Training Sample: N = 541 videos across G = 26 channels.
+2026-11-16 21:32:40,810 [INFO] Validation Sample: N = 136 videos across G = 6 channels.
+2026-11-16 21:32:41,589 [INFO] Centering parameters from training: mu_x = 0.388862, mu_xbar = 0.388553, y_train_mean = 14.097755
+2026-11-16 21:32:41,592 [INFO] 
+Evaluating Candidate Models on Validation Cohort...
+2026-11-16 21:32:41,597 [INFO] Model_0_Baseline         : R²_OOS = 0.4768 | RMSE = 1.5743 | MAE = 1.2290
+2026-11-16 21:32:41,602 [INFO] Model_1_Linear           : R²_OOS = 0.4035 | RMSE = 1.6810 | MAE = 1.3022
+2026-11-16 21:32:41,606 [INFO] Model_2_Quadratic        : R²_OOS = 0.3836 | RMSE = 1.7087 | MAE = 1.3209
+2026-11-16 21:32:41,611 [INFO] Model_3_PeerCongestion   : R²_OOS = 0.3881 | RMSE = 1.7025 | MAE = 1.3180
+2026-11-16 21:32:41,616 [INFO] Model_4_Interaction      : R²_OOS = 0.3965 | RMSE = 1.6908 | MAE = 1.3126
+2026-11-16 21:32:41,621 [INFO] Model_5_FullTags         : R²_OOS = 0.4210 | RMSE = 1.6560 | MAE = 1.2633
+2026-11-16 21:32:41,621 [INFO] 
+======================================================================
+2026-11-16 21:32:41,621 [INFO] MODEL SPECIFICATION SELECTION & LOCKING
+2026-11-16 21:32:41,621 [INFO] ======================================================================
+2026-11-16 21:32:41,621 [INFO] Selection Decision: We lock Model 4-Centered (Strategic Payoff Function) as the final specification.
+Justification:
+1. Theoretical Necessity: Model 4-Centered contains the quadratic term (beta_2) and strategic
+   interaction term (beta_5) required by the CS 329 potential game framework to evaluate
+   diminishing returns, strategic substitutability, and the contraction mapping condition rho < 1.
+2. Empirical Generalization: Model 4-Centered achieves a solid R²_OOS = 0.3965 and RMSE = 1.6908
+   on the 6 validation channels (strictly above zero), showing an improvement over Model 3 (0.3881).
+3. Collinearity Elimination: Centering eliminates regressor collinearity (VIFs < 1.30).
+4. Model Specification is now LOCKED. No further model exploration will be conducted.
+2026-11-16 21:32:41,626 [INFO] Saved validation evaluation summary: C:\Users\bhavy\OneDrive\Desktop\Multiagent System\project\clickappeal_new\payoff_estimation\results\validation_evaluation.csv
+2026-11-16 21:32:41,626 [INFO] Saved validation channel dispersion: C:\Users\bhavy\OneDrive\Desktop\Multiagent System\project\clickappeal_new\payoff_estimation\results\validation_channel_dispersion.csv
+2026-11-16 21:32:41,626 [INFO] ======================================================================
+2026-11-16 21:32:41,626 [INFO] STEP 5 COMPLETED SUCCESSFULLY: MODEL 4-CENTERED LOCKED
+2026-11-16 21:32:41,626 [INFO] ======================================================================

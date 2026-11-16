@@ -1,0 +1,50 @@
+2026-11-16 00:02:50,996 [INFO] ======================================================================
+2026-11-16 00:02:50,996 [INFO] STEP 2: CHANNEL-LEVEL STRATIFIED PARTITIONING & PEER ISOLATION
+2026-11-16 00:02:50,996 [INFO] ======================================================================
+2026-11-16 00:02:51,011 [INFO] Loaded processed dataset: 809 rows across 38 unique channels.
+2026-11-16 00:02:51,022 [INFO] Aggregated channel-level metadata for 38 channels.
+2026-11-16 00:02:51,032 [INFO] Tier_1_Low (<5M): Assigned 8 Train, 2 Val, 2 Test.
+2026-11-16 00:02:51,034 [INFO] Tier_2_Mid (5M-20M): Assigned 11 Train, 3 Val, 2 Test.
+2026-11-16 00:02:51,036 [INFO] Tier_3_Mega (>20M): Assigned 7 Train, 1 Val, 2 Test.
+2026-11-16 00:02:51,038 [INFO] Channel counts per partition: {'train': 26, 'test': 6, 'validation': 6}
+2026-11-16 00:02:51,040 [INFO] Video counts per partition: {'train': 541, 'validation': 136, 'test': 132}
+2026-11-16 00:02:51,062 [INFO] Saved partition mapping: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\data\channel_splits.json
+2026-11-16 00:02:51,078 [INFO] Saved partitioned video dataset: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\data\partitioned_payoff_data.csv (809 rows)
+2026-11-16 00:02:51,085 [INFO] 
+==================================================
+2026-11-16 00:02:51,085 [INFO] TIER BALANCE & SAMPLE SIZE MATRIX:
+2026-11-16 00:02:51,090 [INFO] 
+                    channel_count                  total_videos                 
+partition                    test train validation         test train validation
+subscriber_tier                                                                 
+Tier_1_Low (<5M)                2     8          2           48   157         50
+Tier_2_Mid (5M-20M)             2    11          3           37   235         63
+Tier_3_Mega (>20M)              2     7          1           47   149         23
+2026-11-16 00:02:51,090 [INFO] ======================================================================
+2026-11-16 00:02:51,090 [INFO] STEP 2 COMPLETED SUCCESSFULLY: STRATIFIED SPLIT & PEER ISOLATION ESTABLISHED
+2026-11-16 00:02:51,090 [INFO] ======================================================================
+2026-11-16 00:03:04,085 [INFO] ======================================================================
+2026-11-16 00:03:04,085 [INFO] STEP 2: CHANNEL-LEVEL STRATIFIED PARTITIONING & PEER ISOLATION
+2026-11-16 00:03:04,085 [INFO] ======================================================================
+2026-11-16 00:03:04,098 [INFO] Loaded processed dataset: 809 rows across 38 unique channels.
+2026-11-16 00:03:04,105 [INFO] Aggregated channel-level metadata for 38 channels.
+2026-11-16 00:03:04,108 [INFO] Tier_1_Low (<5M): Assigned 8 Train, 2 Val, 2 Test.
+2026-11-16 00:03:04,109 [INFO] Tier_2_Mid (5M-20M): Assigned 11 Train, 3 Val, 2 Test.
+2026-11-16 00:03:04,111 [INFO] Tier_3_Mega (>20M): Assigned 7 Train, 1 Val, 2 Test.
+2026-11-16 00:03:04,112 [INFO] Channel counts per partition: {'train': 26, 'test': 6, 'validation': 6}
+2026-11-16 00:03:04,114 [INFO] Video counts per partition: {'train': 541, 'validation': 136, 'test': 132}
+2026-11-16 00:03:04,133 [INFO] Saved partition mapping: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\data\channel_splits.json
+2026-11-16 00:03:04,149 [INFO] Saved partitioned video dataset: C:\Users\bhavy\OneDrive\Documents\GitHub\Multiagent-Systems\payoff_estimation\data\partitioned_payoff_data.csv (809 rows)
+2026-11-16 00:03:04,155 [INFO] 
+==================================================
+2026-11-16 00:03:04,155 [INFO] TIER BALANCE & SAMPLE SIZE MATRIX:
+2026-11-16 00:03:04,157 [INFO] 
+                    channel_count                  total_videos                 
+partition                    test train validation         test train validation
+subscriber_tier                                                                 
+Tier_1_Low (<5M)                2     8          2           48   157         50
+Tier_2_Mid (5M-20M)             2    11          3           37   235         63
+Tier_3_Mega (>20M)              2     7          1           47   149         23
+2026-11-16 00:03:04,157 [INFO] ======================================================================
+2026-11-16 00:03:04,157 [INFO] STEP 2 COMPLETED SUCCESSFULLY: STRATIFIED SPLIT & PEER ISOLATION ESTABLISHED
+2026-11-16 00:03:04,157 [INFO] ======================================================================
