@@ -338,6 +338,91 @@
         </div>
       </div>
     </div>
+
+    <!-- ACTIONABLE CREATOR DECISION GUIDE -->
+    <div class="card" style="background:#0f172a; border-left:4px solid var(--accent-blue);">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1rem;">
+        <div>
+          <span style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted);">Empirical Decision Recommendation</span>
+          <h3 id="txtRecTitle" style="font-size:1.15rem; color:#f8fafc; margin-top:0.2rem;">Reduce Click-Appeal by -0.13</h3>
+        </div>
+        <div style="display:flex; gap:0.8rem; align-items:center;">
+          <div style="text-align:right;">
+            <div style="font-size:0.72rem; color:var(--text-muted);">Theoretical Best-Response</div>
+            <div id="txtOptimalScore" style="font-size:1.25rem; font-weight:800; color:var(--accent-gold);">x* = 0.17</div>
+          </div>
+          <button class="btn-primary" id="btnApplyOptimal" onclick="applyOptimalAppeal()" style="background:#0284c7; padding:0.6rem 1rem;">Set to Optimal (x = 0.17)</button>
+        </div>
+      </div>
+      <p id="txtRecBody" style="font-size:0.88rem; color:#cbd5e1; line-height:1.6; margin-bottom:1rem;">
+        You are investing more in sensationalism than is optimal against competitors. Dialing back protects retention with negligible view loss.
+      </p>
+      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem; border-top:1px solid var(--card-border); padding-top:1rem;">
+        <div>
+          <div style="font-size:0.75rem; color:var(--text-muted);">Strategic Status</div>
+          <div id="valStratStatus" style="font-size:0.95rem; font-weight:700; color:var(--accent-gold); margin-top:0.2rem;">Over-Investing in Hype</div>
+        </div>
+        <div>
+          <div style="font-size:0.75rem; color:var(--text-muted);">Marginal View Return</div>
+          <div id="valMarginalReturn" style="font-size:0.95rem; font-weight:700; color:var(--accent-red); margin-top:0.2rem;">Negative (Diminishing)</div>
+        </div>
+        <div>
+          <div style="font-size:0.75rem; color:var(--text-muted);">Channel Health Impact</div>
+          <div id="valChannelHealth" style="font-size:0.95rem; font-weight:700; color:var(--accent-blue); margin-top:0.2rem;">Retention Degradation Risk</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TACTICAL PACKAGING CHECKLIST -->
+    <div class="card">
+      <h3 style="font-size:1.05rem; margin-bottom:0.4rem;">Tactical Packaging Guidelines for Target Score (<span id="txtTargetAppeal">0.17</span>)</h3>
+      <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1.25rem;">
+        Concrete adjustments across the 8 measurable title and thumbnail features to align with your optimal strategy:
+      </p>
+      <div class="grid-2">
+        <div style="background:#0b1120; border:1px solid var(--card-border); border-radius:8px; padding:1.2rem;">
+          <h4 style="font-size:0.92rem; color:var(--accent-blue); margin-bottom:0.75rem;">Title Formatting Rules</h4>
+          <ul style="font-size:0.85rem; color:#cbd5e1; list-style:none; line-height:1.7;" id="listTitleRules">
+            <li>• Capitalization: Keep all words in sentence case or lowercase (0% all-caps words).</li>
+            <li>• Phrasing: Descriptive or question-based phrasing ("How Multi-Agent Systems Work").</li>
+            <li>• Punctuation: Maximum 1 punctuation mark; zero emojis or double exclamation marks.</li>
+          </ul>
+        </div>
+        <div style="background:#0b1120; border:1px solid var(--card-border); border-radius:8px; padding:1.2rem;">
+          <h4 style="font-size:0.92rem; color:var(--accent-purple); margin-bottom:0.75rem;">Thumbnail Design Rules</h4>
+          <ul style="font-size:0.85rem; color:#cbd5e1; list-style:none; line-height:1.7;" id="listThumbRules">
+            <li>• Face & Expression: Natural speaking pose, relaxed expression (FER surprise &lt; 0.2).</li>
+            <li>• Composition: Clean graphic or diagram with balanced contrast (contrast 50-60).</li>
+            <li>• Saturation: Standard sRGB color grading, zero artificial saturation boost.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- STRATEGIC TRADE-OFF COMPARISON -->
+    <div class="card">
+      <h3 style="font-size:1.05rem; margin-bottom:0.4rem;">Long-Term Strategy Trade-Off Comparison</h3>
+      <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">
+        How your current choice compares against alternative positioning strategies in this niche:
+      </p>
+      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem;">
+        <div style="background:#0b1120; border:1px solid var(--card-border); border-radius:8px; padding:1rem;">
+          <div style="font-size:0.75rem; color:var(--accent-green); font-weight:700;">STRATEGY 1: CONSERVATIVE</div>
+          <div style="font-size:0.95rem; font-weight:700; margin:0.3rem 0;">Informative Focus (x = 0.05)</div>
+          <p style="font-size:0.8rem; color:var(--text-muted); line-height:1.5;">Highest viewer trust and subscriber conversion. Modest initial views, zero bounce penalty.</p>
+        </div>
+        <div style="background:#0b1120; border:2px solid var(--accent-blue); border-radius:8px; padding:1rem;">
+          <div style="font-size:0.75rem; color:var(--accent-blue); font-weight:700;">STRATEGY 2: OPTIMAL (RECOMMENDED)</div>
+          <div id="txtStrat2Title" style="font-size:0.95rem; font-weight:700; margin:0.3rem 0;">Equilibrium Response (x = 0.17)</div>
+          <p style="font-size:0.8rem; color:var(--text-muted); line-height:1.5;">Maximizes net views after accounting for competitor crowding and diminishing returns.</p>
+        </div>
+        <div style="background:#0b1120; border:1px solid var(--card-border); border-radius:8px; padding:1rem;">
+          <div style="font-size:0.75rem; color:var(--accent-red); font-weight:700;">STRATEGY 3: AGGRESSIVE</div>
+          <div style="font-size:0.95rem; font-weight:700; margin:0.3rem 0;">Maximum Hype (x = 0.85)</div>
+          <p style="font-size:0.8rem; color:var(--text-muted); line-height:1.5;">Short-term impression surge with heavy viewer bounce, subscriber fatigue, and long-term algorithmic decay.</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- ===================================================================== -->
@@ -514,7 +599,7 @@ function updateCreatorSim() {
     badge.style.background = "rgba(249, 115, 22, 0.5)";
   } else {
     mockup.style.background = "linear-gradient(135deg, #7f1d1d, #ef4444)";
-    overlay.textContent = "😱 DO NOT CLICK THIS VIDEO!! 😱 (GONE WRONG)";
+    overlay.textContent = "DO NOT CLICK THIS VIDEO (GONE WRONG)";
     badge.textContent = "EXTREME CLICKBAIT";
     badge.style.background = "rgba(239, 68, 68, 0.7)";
   }
@@ -560,7 +645,99 @@ function updateCreatorSim() {
     title.textContent = "Balanced Competition";
     text.textContent = "Moderate presentation intensity balances recommendation visibility with audience retention stability.";
   }
+
+  // Best-Response & Actionable Strategy Calculations
+  const optResp = Math.max(0, Math.min(1, (b1 + b5 * comp) / (2 * Math.abs(b2_eff))));
+  const delta = own - optResp;
+
+  const optScoreEl = document.getElementById('txtOptimalScore');
+  const btnApplyEl = document.getElementById('btnApplyOptimal');
+  const targetAppEl = document.getElementById('txtTargetAppeal');
+  const strat2TitleEl = document.getElementById('txtStrat2Title');
+
+  if (optScoreEl) optScoreEl.textContent = "x* = " + optResp.toFixed(2);
+  if (btnApplyEl) btnApplyEl.textContent = "Set to Optimal (x = " + optResp.toFixed(2) + ")";
+  if (targetAppEl) targetAppEl.textContent = optResp.toFixed(2);
+  if (strat2TitleEl) strat2TitleEl.textContent = "Equilibrium Response (x = " + optResp.toFixed(2) + ")";
+
+  const recTitleEl = document.getElementById('txtRecTitle');
+  const recBodyEl = document.getElementById('txtRecBody');
+  const stratStatusEl = document.getElementById('valStratStatus');
+  const margReturnEl = document.getElementById('valMarginalReturn');
+  const chanHealthEl = document.getElementById('valChannelHealth');
+
+  if (recTitleEl && recBodyEl) {
+    if (Math.abs(delta) < 0.04) {
+      recTitleEl.textContent = "Maintain Current Intensity (Optimally Positioned)";
+      recTitleEl.style.color = "var(--accent-green)";
+      stratStatusEl.textContent = "At Equilibrium Response";
+      stratStatusEl.style.color = "var(--accent-green)";
+      margReturnEl.textContent = "Balanced (~0.0)";
+      margReturnEl.style.color = "var(--accent-blue)";
+      chanHealthEl.textContent = "Sustainable Growth";
+      chanHealthEl.style.color = "var(--accent-green)";
+      recBodyEl.textContent = "Your packaging intensity (x = " + own.toFixed(2) + ") matches your theoretical best response against competitors at x = " + comp.toFixed(2) + ". Pushing appeal higher would incur diminishing return penalties without gaining sufficient views; reducing appeal would unnecessarily sacrifice algorithmic feed visibility.";
+    } else if (delta >= 0.04) {
+      recTitleEl.textContent = "Action: Reduce Click-Appeal by -" + delta.toFixed(2);
+      recTitleEl.style.color = "var(--accent-gold)";
+      stratStatusEl.textContent = "Over-Escalating Hype";
+      stratStatusEl.style.color = "var(--accent-gold)";
+      margReturnEl.textContent = "Negative (Over-Saturated)";
+      margReturnEl.style.color = "var(--accent-red)";
+      chanHealthEl.textContent = "Bounce Rate Risk";
+      chanHealthEl.style.color = "var(--accent-gold)";
+      recBodyEl.textContent = "You are investing more in presentation hype (x = " + own.toFixed(2) + ") than is optimal against competitors at x = " + comp.toFixed(2) + ". The marginal click gain does not compensate for audience bounce penalties and content production costs. Reducing intensity to x* = " + optResp.toFixed(2) + " will increase audience retention from " + retention + "% toward " + Math.min(92, Math.round(92 - optResp * 50)) + "% with negligible loss in views.";
+    } else {
+      recTitleEl.textContent = "Action: Increase Click-Appeal by +" + Math.abs(delta).toFixed(2);
+      recTitleEl.style.color = "var(--accent-blue)";
+      stratStatusEl.textContent = "Under-Competing";
+      stratStatusEl.style.color = "var(--accent-blue)";
+      margReturnEl.textContent = "Positive (+ Return)";
+      margReturnEl.style.color = "var(--accent-green)";
+      chanHealthEl.textContent = "Safe Reach Expansion";
+      chanHealthEl.style.color = "var(--accent-blue)";
+      recBodyEl.textContent = "Your competitors are running higher appeal (x = " + comp.toFixed(2) + "), creating network complementarity (beta_5 = +20.79). Your current choice (x = " + own.toFixed(2) + ") leaves potential viewership unclaimed. Elevating presentation curiosity to x* = " + optResp.toFixed(2) + " will increase recommendations while maintaining safe retention (>70%).";
+    }
+  }
+
+  // Dynamic Packaging Checklist
+  const titleUl = document.getElementById('listTitleRules');
+  const thumbUl = document.getElementById('listThumbRules');
+  if (titleUl && thumbUl) {
+    if (optResp < 0.25) {
+      titleUl.innerHTML = '<li>• <strong>Capitalization:</strong> All lowercase or sentence case (0% all-caps words).</li>' +
+                           '<li>• <strong>Phrasing:</strong> Descriptive, transparent phrasing ("How Multi-Agent Systems Work").</li>' +
+                           '<li>• <strong>Punctuation:</strong> 0 exclamation marks; 0 emojis.</li>';
+      thumbUl.innerHTML = '<li>• <strong>Face & Expression:</strong> Calm, natural speaking expression (FER surprise &lt; 0.2).</li>' +
+                           '<li>• <strong>Contrast:</strong> Balanced grayscale contrast (50-60); clean graphics/diagrams.</li>' +
+                           '<li>• <strong>Saturation:</strong> Standard natural color grade (saturation 45-55).</li>';
+    } else if (optResp < 0.60) {
+      titleUl.innerHTML = '<li>• <strong>Capitalization:</strong> Capitalize 1 key keyword for emphasis (all-caps ratio &lt; 20%).</li>' +
+                           '<li>• <strong>Phrasing:</strong> Curiosity gap phrasing ("Why Multi-Agent Systems Are Changing Everything").</li>' +
+                           '<li>• <strong>Punctuation:</strong> Maximum 1 question mark or colon; avoid multiple exclamation marks.</li>';
+      thumbUl.innerHTML = '<li>• <strong>Face & Expression:</strong> Engaged, direct eye contact (FER surprise 0.25 - 0.45).</li>' +
+                           '<li>• <strong>Contrast:</strong> High foreground-to-background contrast (70-80); clear cutout edges.</li>' +
+                           '<li>• <strong>Saturation:</strong> Moderate vibrance boost (+10%) for visibility in dark-mode feeds.</li>';
+    } else {
+      titleUl.innerHTML = '<li>• <strong>Capitalization:</strong> 2-3 capitalized words for high urgency.</li>' +
+                           '<li>• <strong>Phrasing:</strong> Direct action verbs and high-stakes framing.</li>' +
+                           '<li>• <strong>Punctuation:</strong> 1 exclamation mark; max 1 relevant symbol.</li>';
+      thumbUl.innerHTML = '<li>• <strong>Face & Expression:</strong> High intensity emotional expression (FER surprise &gt; 0.55).</li>' +
+                           '<li>• <strong>Contrast:</strong> High punchy contrast (&gt;80) with bold colored border/accents.</li>' +
+                           '<li>• <strong>Saturation:</strong> High saturation (&gt;75) for saturated feed presence.</li>';
+    }
+  }
 }
+
+function applyOptimalAppeal() {
+  const comp = parseFloat(document.getElementById('sliderComp').value);
+  const b1 = -2.0190, b2_eff = -12.1974, b5 = 20.7942;
+  const opt = Math.max(0, Math.min(1, (b1 + b5 * comp) / (2 * Math.abs(b2_eff))));
+  const rounded = Math.round(opt * 20) / 20;
+  document.getElementById('sliderOwn').value = rounded;
+  updateCreatorSim();
+}
+
 updateCreatorSim();
 
 // ============================================================================
