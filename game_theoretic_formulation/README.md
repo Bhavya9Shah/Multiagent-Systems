@@ -1,12 +1,5 @@
 # Game-Theoretic Formulation & Potential Game Analysis
 
-**CS 329: Foundations of AI: Multi-Agent Systems (2026)**  
-*Indian Institute of Technology Gandhinagar*  
-**Project:** Click Appeal as a Potential Game: Modeling Creator Incentives, Attention Congestion, and Social Welfare in YouTube Recommendation  
-**Component:** *Game-Theoretic Formulation, Nash Equilibrium, Social Optimum & Price of Anarchy*  
-
----
-
 ## 1. Executive Summary & Component Role
 
 This component establishes the rigorous game-theoretic framework for modeling decentralized creator competition on YouTube as an **exact continuous potential game** with attention-congestion externalities. Rather than assuming ad-hoc payoff shapes or hypothetical payoff matrices, this module ingests the empirically estimated econometric parameters $(\beta_1, \beta_2, \beta_3, \beta_5)$ from the upstream payoff estimation results (`payoff_estimation/results/game_theory_coefficients.json`), proves mathematical well-posedness, derives the closed-form symmetric Nash equilibrium ($x^{\text{Nash}}$) and Social Optimum ($x^{\text{SO}}$), quantifies efficiency loss via the Price of Anarchy ($\text{PoA}$), and exposes a clean, machine-readable API and handover for downstream multi-agent simulations and platform mediator interventions.
