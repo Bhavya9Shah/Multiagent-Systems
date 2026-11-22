@@ -34,7 +34,7 @@ The repository covers four integrated stages:
 - **Finding:** Marginal platform nudges (lambda <= 0.07) result in **negative welfare recovery** (R(lambda) < 0). Because social welfare is convex (B = beta_2_eff + beta_5 = +8.60 > 0) with a negative initial externality (E = beta_3 = -5.54), moving away from x_Nash initially reduces total welfare before rising above baseline at lambda > 0.145. Effective intervention requires sufficiently strong coordination incentives.
 
 ### 3. Payoff-Based Trial-and-Error Learning (RQ2)
-- Creators observe only realized noisy payoffs y_i(t) = pi_i(x_i(t), x_peer(t)) + noise and adjust intensity via a step-decay trial-and-error rule (Marden et al., 2009).
+- Creators observe only realized noisy payoffs $`y_i(t) = \pi_i(x_i(t), x_{\text{peer}}(t)) + \varepsilon_i(t)`$ and adjust intensity via a step-decay trial-and-error rule (Marden et al., 2009).
 - **Low Noise (sigma <= 0.05):** 100% of simulation runs converge to the Nash equilibrium within approximately 5 rounds.
 - **Empirical Volatility (sigma = 1.14):** At the empirical residual variance observed in YouTube data, noisy feedback triggers spurious direction reversals. Convergence drops to 0% and strategy dispersion remains high (D_T in [0.45, 0.96]). Creators cannot reliably learn the equilibrium from raw view counts alone.
 
