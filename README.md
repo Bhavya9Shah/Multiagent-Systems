@@ -42,6 +42,8 @@ The repository covers four integrated stages:
 
 ## Interactive Browser Simulator
 
+![Interactive Browser Simulator Interface](simulations/simulator_interface.png)
+
 An interactive visual simulator is included in `simulations/live_simulation.html`. It runs directly in any modern web browser without requiring a server, Python installation, or external dependencies.
 
 > **Live Demo:** [**Launch the Interactive Browser Simulator**](https://bhavya9shah.github.io/Multiagent-Systems/simulations/live_simulation.html) — runs directly in your browser with zero setup required.
