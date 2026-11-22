@@ -23,17 +23,10 @@ This directory contains the finalized, self-contained Click Appeal Score compone
 
 Let the normalized title features be $x_{\text{caps}}$, $x_{\text{trigger}}$, $x_{\text{sensitive}}$, and $x_{\text{symbol}}$, and the normalized thumbnail features be $x_{\text{face}}$, $x_{\text{expr}}$, $x_{\text{contrast}}$, and $x_{\text{saturation}}$ (all in $[0, 1]$):
 
-- **Title Click Appeal Score:**
-  $$X_{\text{title}} = \frac{x_{\text{caps}} + x_{\text{trigger}} + x_{\text{sensitive}} + x_{\text{symbol}}}{4}$$
-
-- **Thumbnail Click Appeal Score:**
-  $$X_{\text{thumb}} = \frac{x_{\text{face}} + x_{\text{expr}} + x_{\text{contrast}} + x_{\text{saturation}}}{4}$$
-
-- **Primary Weighted Click Appeal Score ($X_v$):**
-  $$X_v = 0.4 X_{\text{title}} + 0.6 X_{\text{thumb}}$$
-
-- **Equal-Weight Alternative:**
-  $$X_{\text{equal}} = \frac{1}{8} \sum_{j=1}^8 x_j$$
+- **Title Click Appeal Score:** $X_{\text{title}} = \frac{x_{\text{caps}} + x_{\text{trigger}} + x_{\text{sensitive}} + x_{\text{symbol}}}{4}$
+- **Thumbnail Click Appeal Score:** $X_{\text{thumb}} = \frac{x_{\text{face}} + x_{\text{expr}} + x_{\text{contrast}} + x_{\text{saturation}}}{4}$
+- **Primary Weighted Click Appeal Score ($X_v$):** $X_v = 0.4 X_{\text{title}} + 0.6 X_{\text{thumb}}$
+- **Equal-Weight Alternative:** $X_{\text{equal}} = \frac{1}{8} \sum_{j=1}^8 x_j$
 
 ---
 

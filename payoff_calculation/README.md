@@ -38,20 +38,26 @@ Our empirical pipeline follows a pre-registered, leak-free design across 10 sequ
 ## 3. Core Structural Payoff Specifications
 
 ### Econometric Estimation Model (Centered Model 4)
-$$\ln(V_{it}) = \beta_0^* + \beta_1^* (x_{it} - \mu_x) + \beta_2^* (x_{it} - \mu_x)^2 + \beta_3^* (\bar{x}_{-i,t} - \mu_{\bar{x}}) + \beta_5^* (x_{it} - \mu_x)(\bar{x}_{-i,t} - \mu_{\bar{x}}) + \gamma_s \ln(s_i) + \gamma_d \ln(\text{dur}_{it}) + \gamma_a \text{age}_{it} + \varepsilon_{it}$$
+
+$$
+\ln(V_{it}) = \beta_0^* + \beta_1^* (x_{it} - \mu_x) + \beta_2^* (x_{it} - \mu_x)^2 + \beta_3^* (\bar{x}_{-i,t} - \mu_{\bar{x}}) + \beta_5^* (x_{it} - \mu_x)(\bar{x}_{-i,t} - \mu_{\bar{x}}) + \gamma_s \ln(s_i) + \gamma_d \ln(\text{dur}_{it}) + \gamma_a \text{age}_{it} + \varepsilon_{it}
+$$
 
 - Sample centering means: $\mu_x = 0.392395$, $\mu_{\bar{x}} = 0.391390$.
 - Standard deviation of own appeal: $\mathrm{SD}(x) = 0.1037$.
 - Standard deviation of peer appeal: $\mathrm{SD}(\bar{x}) = 0.0074$ (14x smaller, causing weak peer identification).
 
 ### Game-Theoretic Payoff Function (Uncentered Paper Eq. 2)
-$$\pi_i(x_i, \bar{x}_{-i}) = b_{0\_u} + b_{1\_u} x_i + b_{2\_u} x_i^2 + b_{3\_u} \bar{x}_{-i} + b_{5\_u} x_i \bar{x}_{-i} + \gamma_s \ln(s_i) + \gamma_d \ln(\text{dur}_{it}) + \gamma_a \text{age}_{it}$$
+
+$$
+\pi_i(x_i, \bar{x}_{-i}) = b_{0,u} + b_{1,u} x_i + b_{2,u} x_i^2 + b_{3,u} \bar{x}_{-i} + b_{5,u} x_i \bar{x}_{-i} + \gamma_s \ln(s_i) + \gamma_d \ln(\text{dur}_{it}) + \gamma_a \text{age}_{it}
+$$
 
 Analytically derived from centered coefficients with verified prediction equivalence ($\max |\hat{y}_c - \hat{y}_u| < 10^{-14}$):
-- $b_{1\_u} = b_{1c} - 2 b_2 \mu_x - b_5 \mu_{\bar{x}}$
-- $b_{3\_u} = b_{3c} - b_5 \mu_x$
-- $b_{2\_u} = b_2, \quad b_{5\_u} = b_5$
-- $b_{0\_u} = b_{0c} - b_{1c}\mu_x + b_2 \mu_x^2 - b_{3c}\mu_{\bar{x}} + b_5 \mu_x \mu_{\bar{x}}$
+- $b_{1,u} = b_{1c} - 2 b_2 \mu_x - b_5 \mu_{\bar{x}}$
+- $b_{3,u} = b_{3c} - b_5 \mu_x$
+- $b_{2,u} = b_2, \quad b_{5,u} = b_5$
+- $b_{0,u} = b_{0c} - b_{1c}\mu_x + b_2 \mu_x^2 - b_{3c}\mu_{\bar{x}} + b_5 \mu_x \mu_{\bar{x}}$
 
 ---
 
@@ -90,23 +96,23 @@ Analytically derived from centered coefficients with verified prediction equival
 | **Log Duration ($\gamma_d$)** | $+0.0454$ | $0.2534$ | $0.8588$ | $+0.0454$ | $0.2534$ | $0.8588$ |
 | **Age Days ($\gamma_a$)** | $+0.0003$ | $0.0003$ | $0.3178$ | $+0.0003$ | $0.0003$ | $0.3178$ |
 
-*Significance marker: $^{***} p < 0.001$. Degrees of freedom $df = G - 1 = 37$.*
+Significance marker: ***p < 0.001. Degrees of freedom df = G - 1 = 37.
 
 ### Hypothesis Tests & Hypothesis Support Status
 - **Joint Packaging Significance:** $F(4, 37) = 0.4739$ ($p = 0.7546$). Controls explain $99.3\%$ of the variance; packaging terms are jointly insignificant.
 - **Diminishing Returns ($H_0: \beta_2 \ge 0$):** Wild Cluster Bootstrap one-sided $p = 0.2600$. Retained at $\alpha = 0.05$. Concavity is not statistically confirmed.
 - **Strategic Interaction ($H_0: \beta_5 = 0$):** Wild Cluster Bootstrap two-sided $p = 0.7795$. Retained at $\alpha = 0.05$.
 - **Original Proposal Hypotheses (H1-H4):** Not supported by the data:
-  - *H1 ($b_1 > 0$):* not supported ($p = 0.92$) (uncentered point estimate $b_{1\_u} = -2.0190$, $\mathrm{SE} = 20.9201$).
+  - *H1 ($b_1 > 0$):* not supported ($p = 0.92$) (uncentered point estimate $b_{1,u} = -2.0190$, $\mathrm{SE} = 20.9201$).
   - *H2 ($b_2 < 0$):* Insignificant ($p = 0.3297$).
   - *H3 ($b_3 < 0$):* Insignificant ($p = 0.8097$).
   - *H4 ($b_5 < 0$):* Point estimate is positive ($+20.7942$, complements) and insignificant ($p = 0.7318$).
 
 ### Cluster-Pairs Bootstrap Diagnostics ($B = 2{,}000$)
-- **Standard Error Verification:** Ratio $\frac{\mathrm{SE}_{\mathrm{boot}}}{\mathrm{SE}_{\mathrm{CRSE}}}$ is between $0.95$ and $1.06$ for all variables (log-subscribers ratio is $1.064$, resolving the earlier 12x deflation artifact).
-- **Concave Draws ($b_2 < 0$):** $81.40\%$ ($\frac{1{,}628}{2{,}000}$).
-- **Contraction & Concave Satisfied ($\rho < 1$ and $b_2 < 0$):** Exactly $18.65\%$ ($\frac{373}{2{,}000}$).
-- **Contraction Ratio ($\rho = \frac{|b_5|}{2|b_2|}$ among concave draws):**
+- **Standard Error Verification:** Ratio $\text{SE}_{\text{boot}} / \text{SE}_{\text{CRSE}}$ is between $0.95$ and $1.06$ for all variables (log-subscribers ratio is $1.064$, resolving the earlier 12x deflation artifact).
+- **Concave Draws ($b_2 < 0$):** $81.40\%$ (1,628 / 2,000).
+- **Contraction & Concave Satisfied ($\rho < 1$ and $b_2 < 0$):** Exactly $18.65\%$ (373 / 2,000).
+- **Contraction Ratio ($\rho = |b_5| / (2|b_2|)$ among concave draws):**
   - Point estimate: $\rho = 1.2683$
   - 95% Confidence Interval: $[0.1140, 35.7036]$
   - Median: $2.1528$ ($p_{10} = 0.4200, p_{25} = 1.1053, p_{75} = 4.0546, p_{90} = 9.4619$).
@@ -119,24 +125,30 @@ This section provides the calibrated empirical structural parameters and covaria
 
 ### Primary Structural Parameters (Paper Eq. 2)
 The uncentered empirical payoff function parameters corresponding to paper Equation (2) are:
-$$\pi_i(x_i, \bar{x}_{-i}) = b_{0\_u} + b_{1\_u} x_i + b_{2\_u} x_i^2 + b_{3\_u} \bar{x}_{-i} + b_{5\_u} x_i \bar{x}_{-i} + \gamma_s \ln(s_i) + \gamma_d \ln(\text{dur}_{it}) + \gamma_a \text{age}_{it}$$
 
-- **Uncentered Point Estimates:**
-  $$b_{1\_u} = -2.0190, \quad b_{2\_u} = -8.1974, \quad b_{3\_u} = -5.5424, \quad b_{5\_u} = +20.7942$$
-  $$b_{0\_u} = -1.7604, \quad \gamma_s = 1.0417, \quad \gamma_d = 0.0454, \quad \gamma_a = 0.0003$$
-- **Centering Sample Means:**
-  $$\mu_x = 0.392395, \quad \mu_{\bar{x}} = 0.391390$$
-- **Delta-Method Covariance Matrix $\mathbf{\Sigma}_u$ (Order: $b_{1\_u}, b_{2\_u}, b_{3\_u}, b_{5\_u}$):**
-$$\mathbf{\Sigma}_u = \begin{pmatrix}
+$$
+\pi_i(x_i, \bar{x}_{-i}) = b_{0,u} + b_{1,u} x_i + b_{2,u} x_i^2 + b_{3,u} \bar{x}_{-i} + b_{5,u} x_i \bar{x}_{-i} + \gamma_s \ln(s_i) + \gamma_d \ln(\text{dur}_{it}) + \gamma_a \text{age}_{it}
+$$
+
+- **Uncentered Point Estimates:**  
+  $b_{1,u} = -2.0190, \quad b_{2,u} = -8.1974, \quad b_{3,u} = -5.5424, \quad b_{5,u} = +20.7942$  
+  $b_{0,u} = -1.7604, \quad \gamma_s = 1.0417, \quad \gamma_d = 0.0454, \quad \gamma_a = 0.0003$
+- **Centering Sample Means:**  
+  $\mu_x = 0.392395, \quad \mu_{\bar{x}} = 0.391390$
+- **Delta-Method Covariance Matrix $\mathbf{\Sigma}_u$ (Order: $b_{1,u}, b_{2,u}, b_{3,u}, b_{5,u}$):**
+
+$$
+\mathbf{\Sigma}_u = \begin{pmatrix}
 437.6519 & 81.7337 & 456.3322 & -1233.9756 \\
 81.7337 & 68.8802 & 108.1554 & -316.4174 \\
 456.3322 & 108.1554 & 522.2211 & -1330.6057 \\
 -1233.9756 & -316.4174 & -1330.6057 & 3627.1741
-\end{pmatrix}$$
+\end{pmatrix}
+$$
 
 ### Factual Mathematical Properties
 Factually, at the empirical point estimates:
-- $b_{5\_u} > 2|b_{2\_u}|$ ($20.7942 > 16.3948$) and $b_{2\_u} + b_{5\_u} > 0$ ($-8.1974 + 20.7942 = +12.5968 > 0$).
+- $b_{5,u} > 2|b_{2,u}|$ ($20.7942 > 16.3948$) and $b_{2,u} + b_{5,u} > 0$ ($-8.1974 + 20.7942 = +12.5968 > 0$).
 - Across $2{,}000$ cluster-pairs bootstrap draws, only $18.65\%$ of draws satisfy $|b_5| < 2|b_2|$.
 
 ---

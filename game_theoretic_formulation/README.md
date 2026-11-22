@@ -9,16 +9,28 @@ This component establishes the rigorous game-theoretic framework for modeling de
 ## 2. Mathematical Formulation
 
 ### 2.1 Agents, Action Spaces, and Reduced Payoff Function
+
 The agents are $n = 38$ content creators competing in a single niche. Each creator $i \in \{1, \dots, n\}$ independently chooses a continuous click appeal score:
-$$x_i \in [0, 1]$$
-Let $\boldsymbol{x} = (x_1, \dots, x_n)$ denote the joint strategy profile, and let $\bar{x}_{-i} = \frac{1}{n-1}\sum_{j \neq i} x_j$ denote the leave-one-out niche competitor average faced by creator $i$.
+
+$$
+x_i \in [0, 1]
+$$
+
+Let $\boldsymbol{x} = (x_1, \dots, x_n)$ denote the joint strategy profile, and let $\bar{x}_{-i} = \frac{1}{n-1} \sum_{j \neq i} x_j$ denote the leave-one-out niche competitor average faced by creator $i$.
 
 The reduced-form payoff function (Proposal Eq. 2) is:
-$$\pi_i(x_i, \bar{x}_{-i}) = \beta_1 x_i + \beta_2 x_i^2 + \beta_3 \bar{x}_{-i} + \beta_5 x_i \bar{x}_{-i} + c_i$$
+
+$$
+\pi_i(x_i, \bar{x}_{-i}) = \beta_1 x_i + \beta_2 x_i^2 + \beta_3 \bar{x}_{-i} + \beta_5 x_i \bar{x}_{-i} + c_i
+$$
+
 where $c_i = \beta_0 + \beta_4 \log(s_i) + \boldsymbol{\gamma}^\top \boldsymbol{Z}_i$ captures exogenous channel characteristics (subscriber scale, duration, video age).
 
 The partial derivatives governing strategic behavior are:
-$$\frac{\partial \pi_i}{\partial x_i} = \beta_1 + 2\beta_2 x_i + \beta_5 \bar{x}_{-i}, \quad \frac{\partial^2 \pi_i}{\partial x_i \partial \bar{x}_{-i}} = \beta_5$$
+
+$$
+\frac{\partial \pi_i}{\partial x_i} = \beta_1 + 2\beta_2 x_i + \beta_5 \bar{x}_{-i}, \quad \frac{\partial^2 \pi_i}{\partial x_i \partial \bar{x}_{-i}} = \beta_5
+$$
 
 ### 2.2 Mathematical Well-Posedness Conditions (Proposal Eq. 3)
 For the game to be mathematically well-behaved, three conditions must hold:
@@ -27,12 +39,25 @@ For the game to be mathematically well-behaved, three conditions must hold:
 3. **Strict Social Welfare Concavity ($\beta_2 + \beta_5 < 0$):** Ensures total social welfare $W(\boldsymbol{x})$ is strictly concave, yielding a unique social optimum.
 
 ### 2.3 Exact Potential Game Structure (Monderer & Shapley, 1996)
+
 The game is an **exact potential game** admitting the global potential function $\Phi: [0, 1]^n \to \mathbb{R}$:
-$$\Phi(\boldsymbol{x}) = \sum_{i=1}^n \left(\beta_1 x_i + \beta_2 x_i^2\right) + \frac{\beta_5}{n-1} \sum_{i < j} x_i x_j$$
+
+$$
+\Phi(\boldsymbol{x}) = \sum_{i=1}^n \left(\beta_1 x_i + \beta_2 x_i^2\right) + \frac{\beta_5}{n-1} \sum_{i < j} x_i x_j
+$$
+
 which satisfies the exact potential property:
-$$\frac{\partial \Phi(\boldsymbol{x})}{\partial x_i} = \beta_1 + 2\beta_2 x_i + \frac{\beta_5}{n-1} \sum_{j \neq i} x_j = \beta_1 + 2\beta_2 x_i + \beta_5 \bar{x}_{-i} = \frac{\partial \pi_i(x_i, \bar{x}_{-i})}{\partial x_i} \quad \forall i$$
+
+$$
+\frac{\partial \Phi(\boldsymbol{x})}{\partial x_i} = \beta_1 + 2\beta_2 x_i + \frac{\beta_5}{n-1} \sum_{j \neq i} x_j = \beta_1 + 2\beta_2 x_i + \beta_5 \bar{x}_{-i} = \frac{\partial \pi_i(x_i, \bar{x}_{-i})}{\partial x_i} \quad \forall i
+$$
+
 The Hessian matrix $\nabla^2 \Phi(\boldsymbol{x})$ has two distinct eigenvalues:
-$$\lambda_1 = 2\beta_2 + \beta_5 \quad (\text{along the all-ones direction } \boldsymbol{1}), \quad \lambda_2 = 2\beta_2 - \frac{\beta_5}{n-1} \quad (\text{along the orthogonal subspace } \boldsymbol{1}^\perp)$$
+
+$$
+\lambda_1 = 2\beta_2 + \beta_5 \quad (\text{along the all-ones direction } \boldsymbol{1}), \quad \lambda_2 = 2\beta_2 - \frac{\beta_5}{n-1} \quad (\text{along the orthogonal subspace } \boldsymbol{1}^\perp)
+$$
+
 Under the contraction condition $|\beta_5| < 2|\beta_2|$, both $\lambda_1 < 0$ and $\lambda_2 < 0$. Therefore, $\Phi$ is strictly concave on $[0, 1]^n$, its unique global maximizer coincides with the unique Nash equilibrium, and decentralized gradient dynamics converge to $x^*$.
 
 ---
@@ -40,28 +65,57 @@ Under the contraction condition $|\beta_5| < 2|\beta_2|$, both $\lambda_1 < 0$ a
 ## 3. Closed-Form Equilibrium Solutions
 
 ### 3.1 Best Response & Symmetric Nash Equilibrium (Proposal Eq. 4 & 5)
+
 Setting $\frac{\partial \pi_i}{\partial x_i} = 0$:
-$$\text{BR}_i(\bar{x}_{-i}) = \text{clip}\left(\frac{\beta_1 + \beta_5 \bar{x}_{-i}}{2|\beta_2|}, 0, 1\right)$$
+
+$$
+\text{BR}_i(\bar{x}_{-i}) = \text{clip}\left(\frac{\beta_1 + \beta_5 \bar{x}_{-i}}{2|\beta_2|}, 0, 1\right)
+$$
+
 In any symmetric profile $x_1 = \dots = x_n = x$, we have $\bar{x}_{-i} = x$. The unique symmetric Nash equilibrium is the fixed point $\text{BR}(x) = x$:
-$$x^{\text{Nash}} = \text{clip}\left(\frac{\beta_1}{2|\beta_2| - \beta_5}, 0, 1\right)$$
+
+$$
+x^{\text{Nash}} = \text{clip}\left(\frac{\beta_1}{2|\beta_2| - \beta_5}, 0, 1\right)
+$$
 
 ### 3.2 Social Optimum (Proposal Eq. 6)
+
 A social planner maximizes total expected log-view welfare $W(\boldsymbol{x}) = \sum_{i=1}^n \pi_i(x_i, \bar{x}_{-i})$. At a common intensity $x_1 = \dots = x_n = x$:
-$$\pi(x, x) = (\beta_1 + \beta_3) x + (\beta_2 + \beta_5) x^2 + c$$
+
+$$
+\pi(x, x) = (\beta_1 + \beta_3) x + (\beta_2 + \beta_5) x^2 + c
+$$
+
 Setting the derivative to zero yields:
-$$x^{\text{SO}} = \text{clip}\left(\frac{\beta_1 + \beta_3}{2(|\beta_2| - \beta_5)}, 0, 1\right)$$
+
+$$
+x^{\text{SO}} = \text{clip}\left(\frac{\beta_1 + \beta_3}{2(|\beta_2| - \beta_5)}, 0, 1\right)
+$$
 
 ### 3.3 Marginal External Effect & The Nash-Optimum Gap (Proposal Eq. 7 & 8)
+
 At the Nash profile, the external effect imposed by one creator on peers is:
-$$E = \beta_3 + \beta_5 x^{\text{Nash}}$$
+
+$$
+E = \beta_3 + \beta_5 x^{\text{Nash}}
+$$
+
 Each creator ignores $E$ when choosing $x_i$. The exact equilibrium gap is:
-$$\Delta = x^{\text{SO}} - x^{\text{Nash}} = \frac{E}{2(|\beta_2| - \beta_5)}$$
+
+$$
+\Delta = x^{\text{SO}} - x^{\text{Nash}} = \frac{E}{2(|\beta_2| - \beta_5)}
+$$
+
 - **Attention Congestion ($H_1: E < 0$):** Decentralized competition overshoots the social optimum ($x^{\text{Nash}} > x^{\text{SO}}$) because negative externalities push creators into an aggressive clickbait arms race.
 - **Positive Network Spillover ($E > 0$):** Creators under-invest relative to the social optimum ($x^{\text{Nash}} < x^{\text{SO}}$).
 
 ### 3.4 Price of Anarchy (Proposal Eq. 9 & 10)
+
 Measuring social welfare as total predicted views $V(x) = \exp(\pi(x, x))$:
-$$\text{PoA} = \frac{V(x^{\text{SO}})}{V(x^{\text{Nash}})} = \exp\left[\pi(x^{\text{SO}}, x^{\text{SO}}) - \pi(x^{\text{Nash}}, x^{\text{Nash}})\right] = \exp\left(\frac{E^2}{4(|\beta_2| - \beta_5)}\right)$$
+
+$$
+\text{PoA} = \frac{V(x^{\text{SO}})}{V(x^{\text{Nash}})} = \exp\left[\pi(x^{\text{SO}}, x^{\text{SO}}) - \pi(x^{\text{Nash}}, x^{\text{Nash}})\right] = \exp\left(\frac{E^2}{4(|\beta_2| - \beta_5)}\right)
+$$
 Because $E^2 \ge 0$ and $|\beta_2| - \beta_5 > 0$, $\text{PoA} \ge 1.0$ structurally, with $\text{PoA} = 1.0$ if and only if $E = 0$.
 
 ---

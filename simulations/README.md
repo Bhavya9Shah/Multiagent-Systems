@@ -72,7 +72,10 @@ simulations/
 ### 3.1 Synchronous Best-Response Dynamics
 
 Agents iterate:
-$$x_i^{t+1} = \text{BR}_i\!\left(\bar{x}_{-i}^t\right) = \text{clip}\!\left(\frac{\beta_1 + \beta_5 \bar{x}_{-i}^t}{2|\beta_2^{\mathrm{eff}}|}, 0, 1\right)$$
+
+$$
+x_i^{t+1} = \text{BR}_i\!\left(\bar{x}_{-i}^t\right) = \text{clip}\!\left(\frac{\beta_1 + \beta_5 \bar{x}_{-i}^t}{2|\beta_2^{\mathrm{eff}}|}, 0, 1\right)
+$$
 
 By the **contraction mapping theorem**, with $k = \frac{|\beta_5|}{2|\beta_2^{\mathrm{eff}}|} = 0.8524 < 1.0$ under Regime A Option B, dynamics contract to $x_{\mathrm{Nash}} = 0.0$ from any starting point. Independent numeric verification (`sim_numeric.py`) confirms closed-form equilibria via bracketed bisection on $g(x) = \text{BR}(x) - x$.
 
@@ -85,11 +88,18 @@ Recommendation: $x_\lambda = (1-\lambda) x_{\mathrm{Nash}} + \lambda x_{\mathrm{
 Deviation gain ($\epsilon$-IC check): $G(\lambda) = \pi(\text{BR}(x_\lambda), x_\lambda) - \pi(x_\lambda, x_\lambda)$.
 
 Log-view welfare recovery ($R$ answers RQ1 for log-view welfare):
-$$R(\lambda) = \frac{W(x_\lambda) - W(x_{\mathrm{Nash}})}{W(x_{\mathrm{SO}}) - W(x_{\mathrm{Nash}})}$$
+
+$$
+R(\lambda) = \frac{W(x_\lambda) - W(x_{\mathrm{Nash}})}{W(x_{\mathrm{SO}}) - W(x_{\mathrm{Nash}})}
+$$
+
 *(Note: When welfare is strictly concave and equilibria are interior, this reduces to $2\lambda - \lambda^2$. When welfare is convex, as in Regime A, $R(\lambda) \ne 2\lambda - \lambda^2$ and is evaluated definitionally.)*
 
 View welfare recovery ($R_V$ answers RQ1 for actual views, exp-scale):
-$$R_V(\lambda) = \frac{\exp(W(x_\lambda)) - \exp(W(x_{\mathrm{Nash}}))}{\exp(W(x_{\mathrm{SO}})) - \exp(W(x_{\mathrm{Nash}}))}$$
+
+$$
+R_V(\lambda) = \frac{\exp(W(x_\lambda)) - \exp(W(x_{\mathrm{Nash}}))}{\exp(W(x_{\mathrm{SO}})) - \exp(W(x_{\mathrm{Nash}}))}
+$$
 
 ### 3.3 Payoff-Based Trial-and-Error Learning (RQ2, Paper Eq. 16)
 
@@ -98,9 +108,9 @@ Creators observe **only** their own noisy payoff $y_i^t = \pi_i(x_i^t, \bar{x}_{
 - **Initialisation ($t=0$):** $x_i^0 \sim U[\text{range}]$, $d_i^0 \in \{-1, +1\}$ uniformly. Config supports `"uniform"`, `"low"` ($U[0, 0.3]$), `"high"` ($U[0.7, 1.0]$); pipeline calls use `init="both"` in `run_learning_regime` which runs both and reports each separately (not aggregated).
 - **Boundary condition ($y^0$):** Evaluated at the round-0 profile so round $t=1$ has a valid comparison baseline.
 - **Update rule ($t=1, 2, \dots, T$):**
-  $$\eta_t = \frac{\eta}{\sqrt{t}}$$
-  $$d_i^t = d_i^{t-1} \quad \text{if } y_i^t \ge y_i^{t-1}, \quad \text{else } -d_i^{t-1}$$
-  $$x_i^{t+1} = \text{clip}\left(x_i^t + \eta_t d_i^t, 0, 1\right)$$
+  - Step size: $\eta_t = \frac{\eta}{\sqrt{t}}$
+  - Direction: $d_i^t = d_i^{t-1} \text{ if } y_i^t \ge y_i^{t-1}, \text{ else } -d_i^{t-1}$
+  - Action update: $x_i^{t+1} = \text{clip}\left(x_i^t + \eta_t d_i^t, 0, 1\right)$
 
 - **Convergence Metrics:**
   - $D_T = \max_i |x_i - x_{\mathrm{Nash}}|$ (**primary** sup-norm dispersion metric at horizon $T$)
@@ -205,6 +215,30 @@ Parametric bootstrap draws ($N=10,000$) were generated from $\mathcal{N}(\hat{\b
 ---
 
 ## 6. Generated Figures
+
+### Key Experimental Results
+
+#### 1. Best-Response Dynamics Convergence
+Convergence of 100 random initial profiles under synchronous best-response dynamics contracting to $x_{\mathrm{Nash}} = 0.0000$ at rate $k = 0.8524$.
+
+![Best-Response Dynamics Convergence](plots/01_br_convergence.png)
+
+#### 2. Social Welfare Trajectory & Price of Anarchy
+Symmetric creator payoff trajectory across iterations, highlighting the $181.7\%$ social welfare coordination gap ($\text{PoA} = 2.8166$).
+
+![Welfare Trajectory and Price of Anarchy Gap](plots/02_welfare_trajectory.png)
+
+#### 3. Platform Mediator Recommendation Sweep
+Unilateral deviation gain $G(\lambda)$ and welfare recovery $R(\lambda)$, illustrating the initial negative welfare dip before recovery.
+
+![Platform Mediator Recommendation Sweep](plots/03_mediator_sweep.png)
+
+#### 4. Payoff-Based Trial-and-Error Learning Convergence
+Mean strategy trajectories across 500 rounds under low noise ($\sigma = 0.05$, converging) versus empirical volatility ($\sigma = 1.14$, dispersed).
+
+![Payoff-Based Learning Convergence](plots/05_learning_convergence.png)
+
+### Complete Figure Catalog
 
 | File | Description |
 |------|-------------|
