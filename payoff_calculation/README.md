@@ -1,11 +1,5 @@
 # Empirical Payoff Function Estimation & Econometric Analysis
 
-**CS 329: Foundations of AI: Multi-Agent Systems**  
-*Indian Institute of Technology Gandhinagar*  
-**Project:** Click Appeal as a Potential Game: Modeling Creator Incentives, Attention Congestion, and Social Welfare in YouTube  
-
----
-
 ## 1. Overview & Purpose
 
 This component provides the empirical foundation for modeling YouTube creator packaging competition as a **Continuous Aggregative Exact Potential Game**. Rather than assuming synthetic or arbitrary payoff functions, we estimate the structural parameters of the creator revenue function directly from multimodal video packaging metrics and YouTube performance data ($N = 809$ videos across 38 distinct creator channels).
@@ -109,7 +103,7 @@ Significance marker: ***p < 0.001. Degrees of freedom df = G - 1 = 37.
   - *H4 ($b_5 < 0$):* Point estimate is positive ($+20.7942$, complements) and insignificant ($p = 0.7318$).
 
 ### Cluster-Pairs Bootstrap Diagnostics ($B = 2{,}000$)
-- **Standard Error Verification:** Ratio $\text{SE}_{\text{boot}} / \text{SE}_{\text{CRSE}}$ is between $0.95$ and $1.06$ for all variables (log-subscribers ratio is $1.064$, resolving the earlier 12x deflation artifact).
+- **Standard Error Verification:** Ratio $`\text{SE}_{\text{boot}} / \text{SE}_{\text{CRSE}}`$ is between $0.95$ and $1.06$ for all variables (log-subscribers ratio is $1.064$, resolving the earlier 12x deflation artifact).
 - **Concave Draws ($b_2 < 0$):** $81.40\%$ (1,628 / 2,000).
 - **Contraction & Concave Satisfied ($\rho < 1$ and $b_2 < 0$):** Exactly $18.65\%$ (373 / 2,000).
 - **Contraction Ratio ($\rho = |b_5| / (2|b_2|)$ among concave draws):**
