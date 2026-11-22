@@ -256,6 +256,13 @@ Mean strategy trajectories across 500 rounds under low noise ($\sigma = 0.05$, c
 
 ---
 
+## Interactive Dashboard
+
+Explore the simulation results, parameter sweeps, and multi-agent trajectories interactively without running local scripts:
+
+- **Live Dashboard:** [Multi-Agent Simulation Dashboard](https://bhavya9shah.github.io/Multiagent-Systems/dashboard.html)
+- **Source File:** [`simulations/dashboard.html`](dashboard.html)
+
 ## 7. How to Run
 
 ```bash
