@@ -44,6 +44,8 @@ The repository covers four integrated stages:
 
 An interactive visual simulator is included in `simulations/live_simulation.html`. It runs directly in any modern web browser without requiring a server, Python installation, or external dependencies.
 
+> **Live Demo:** [**Launch the Interactive Browser Simulator**](https://bhavya9shah.github.io/Multiagent-Systems/simulations/live_simulation.html) — runs directly in your browser with zero setup required.
+
 - **Creator Strategy Simulator:** Test how an individual creator's view count and audience retention respond to varying own appeal and competitor competition.
 - **Multi-Agent Simulation Arena:** Run real-time simulations of 38 autonomous creators interacting under best-response dynamics, low-noise learning, empirical-noise learning, or mediator intervention.
 - **Analytical Summary:** Key theoretical derivations and empirical parameters organized for quick reference.
