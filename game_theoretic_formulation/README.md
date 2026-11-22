@@ -193,7 +193,7 @@ Percentile Intervals (Contraction-Valid, 2,732 draws - Contains Point Estimate):
 ## 6. Limitations & Methodological Clarifications
 
 1. **Assumed Regularization ($\kappa=8.0$):** In the unaugmented $N=809$ estimation, individual concavity is not statistically established ($\beta_{2,u} = -8.1974$, $p=0.26$). The quadratic cost parameter $\kappa=8.0$ is an assumed regularizer ($\beta_{2,\text{eff}} = \beta_{2,u} - \frac{\kappa}{2} = -12.1974$) rather than an empirically estimated cost.
-2. **Identification of Peer Packaging:** Within a single niche at any time $t$, competitor leave-one-out averages $\bar{x}_{-i,t}$ vary across creators only through the focal creator's own packaging $x_{it}$ ($\frac{\partial \bar{x}_{-i,t}}{\partial x_{it}} = -\frac{1}{n-1}$). Cross-sectional peer variation is therefore $O\left(\frac{1}{n}\right)$, meaning $\beta_3$ and $\beta_5$ are identified primarily through aggregate time variation across the 24-month window.
+2. **Identification of Peer Packaging:** Within a single niche at any time $t$, competitor leave-one-out averages $`\bar{x}_{-i,t}`$ vary across creators only through the focal creator's own packaging $`x_{it}`$ ($`\frac{\partial \bar{x}_{-i,t}}{\partial x_{it}} = -\frac{1}{n-1}`$).. Cross-sectional peer variation is therefore $O\left(\frac{1}{n}\right)$, meaning $\beta_3$ and $\beta_5$ are identified primarily through aggregate time variation across the 24-month window.
 3. **Mediator Interpretation:** Because potential games with unique contraction equilibria have no correlated equilibria outside the Nash equilibrium, the platform mediator is formally an **$\varepsilon$-Nash incentive-compatibility device** ($\varepsilon$-IC) evaluating unilateral deviation gains, rather than an expanded Aumann correlated equilibrium.
 
 ---
@@ -203,7 +203,7 @@ Percentile Intervals (Contraction-Valid, 2,732 draws - Contains Point Estimate):
 All plots are rendered at 300 DPI and saved in `plots/`:
 
 1. `01_best_response_and_nash.png`:
-   - Dual-panel plot contrasting best-response curves $\text{BR}_i(\bar{x}_{-i})$ against the 45-degree line and cobweb contraction iteration for the Calibrated Empirical Baseline ($k = 0.8524$).
+   - Dual-panel plot contrasting best-response curves $`\text{BR}_i(\bar{x}_{-i})`$ against the 45-degree line and cobweb contraction iteration for the Calibrated Empirical Baseline ($k = 0.8524$).
 2. `02_welfare_nash_vs_social_optimum.png`:
    - Symmetric log-view welfare $\pi(x, x)$ comparing Nash outcomes against Social Optima, shading the Price of Anarchy efficiency loss ($\text{PoA} = 2.817$), along with the mediator recovery curve $R(\lambda)$.
 3. `03_potential_function_landscape.png`:
