@@ -116,7 +116,8 @@ Measuring social welfare as total predicted views $V(x) = \exp(\pi(x, x))$:
 $$
 \text{PoA} = \frac{V(x^{\text{SO}})}{V(x^{\text{Nash}})} = \exp\left[\pi(x^{\text{SO}}, x^{\text{SO}}) - \pi(x^{\text{Nash}}, x^{\text{Nash}})\right] = \exp\left(\frac{E^2}{4(|\beta_2| - \beta_5)}\right)
 $$
-Because $E^2 \ge 0$ and $|\beta_2| - \beta_5 > 0$, $\text{PoA} \ge 1.0$ structurally, with $\text{PoA} = 1.0$ if and only if $E = 0$.
+
+Because $`E^2 \ge 0`$ and $`|\beta_2| - \beta_5 > 0`$, $`\text{PoA} \ge 1.0`$ structurally, with $`\text{PoA} = 1.0`$ if and only if $`E = 0`$.
 
 ---
 
