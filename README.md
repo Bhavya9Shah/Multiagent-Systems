@@ -38,6 +38,11 @@ The repository covers four integrated stages:
 - **Low Noise (sigma <= 0.05):** 100% of simulation runs converge to the Nash equilibrium within approximately 5 rounds.
 - **Empirical Volatility (sigma = 1.14):** At the empirical residual variance observed in YouTube data, noisy feedback triggers spurious direction reversals. Convergence drops to 0% and strategy dispersion remains high (D_T in [0.45, 0.96]). Creators cannot reliably learn the equilibrium from raw view counts alone.
 
+## Quickstart & Verification
+
+> **No setup required to explore results:** View the hosted [Interactive Simulation Dashboard](https://bhavya9shah.github.io/Multiagent-Systems/dashboard.html) directly in your browser.
+
+
 ---
 
 ## Interactive Browser Simulator
