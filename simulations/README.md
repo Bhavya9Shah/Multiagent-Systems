@@ -79,7 +79,7 @@ $$
 
 By the **contraction mapping theorem**, with $k = \frac{|\beta_5|}{2|\beta_2^{\mathrm{eff}}|} = 0.8524 < 1.0$ under Regime A Option B, dynamics contract to $x_{\mathrm{Nash}} = 0.0$ from any starting point. Independent numeric verification (`sim_numeric.py`) confirms closed-form equilibria via bracketed bisection on $g(x) = \text{BR}(x) - x$.
 
-Theoretical error decay: $\|x_t - x_{\mathrm{Nash}}\|_\infty \le k^t \cdot \|x_0 - x_{\mathrm{Nash}}\|_\infty$.
+Theoretical error decay: $`\|x_t - x_{\mathrm{Nash}}\|_\infty \le k^t \cdot \|x_0 - x_{\mathrm{Nash}}\|_\infty`$.
 
 ### 3.2 Platform Mediator (RQ1)
 
@@ -113,13 +113,13 @@ Creators observe **only** their own noisy payoff $y_i^t = \pi_i(x_i^t, \bar{x}_{
   - Action update: $x_i^{t+1} = \text{clip}\left(x_i^t + \eta_t d_i^t, 0, 1\right)$
 
 - **Convergence Metrics:**
-  - $D_T = \max_i |x_i - x_{\mathrm{Nash}}|$ (**primary** sup-norm dispersion metric at horizon $T$)
-  - $\text{frac\_creators\_within\_delta\_T} = \frac{1}{n} \sum_i \mathbf{1}_{|x_i - x_{\mathrm{Nash}}| < \delta}$ (**primary** creator share in $\delta$-ball)
-  - $\text{std\_across\_creators\_T} = \text{std}_i(x_i^T)$
-  - $\Delta_T = |\bar{x}_T - x_{\mathrm{Nash}}|$ (secondary population mean gap)
-  - $T_\delta = \min\{t : |\bar{x}_{t'} - x_{\mathrm{Nash}}| < \delta \text{ for ALL } t' \ge t \text{ up to } T\}$; $\text{NaN}$ if not within $\delta$ at $T$.
-  - $t_{\mathrm{first\_hit}} = \text{first round } t \text{ with } |\bar{x}_t - x_{\mathrm{Nash}}| < \delta$ (appended column)
-  - $S_T = \text{Var}(\bar{x}_t \text{ over last } k \text{ rounds})$
+  - $`D_T = \max_i |x_i^T - x_{\mathrm{Nash}}|`$ (*primary* sup-norm dispersion metric at horizon $T$)
+  - $`\text{frac\_creators\_within\_delta\_T} = \frac{1}{n} \sum_i \mathbf{1}\{|x_i^T - x_{\mathrm{Nash}}| < \delta\}`$ (*primary* creator share in $\delta$-ball)
+  - $`\text{std\_across\_creators\_T} = \text{std}_i(x_i^T)`$
+  - $`\Delta_T = |\bar{x}_T - x_{\mathrm{Nash}}|`$ (secondary population mean gap)
+  - $`T_\delta = \min\{t : |\bar{x}_{t'} - x_{\mathrm{Nash}}| < \delta \text{ for ALL } t' \ge t \text{ up to } T\}`$; `NaN` if not within $\delta$ at $T$.
+  - $`t_{\mathrm{first\_hit}} = \text{first round } t \text{ with } |\bar{x}_t - x_{\mathrm{Nash}}| < \delta`$ (appended column)
+  - $`S_T = \text{Var}(\bar{x}_t \text{ over last } k \text{ rounds})`$
 
 ---
 
